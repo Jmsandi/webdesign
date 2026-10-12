@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Week 1: Foundations of Digital Literacy</title>
+<title>Web Design Day 2: Layout &amp; Style</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
 :root{
@@ -88,6 +88,9 @@ body.notes-open #notes{max-height:42vh;padding:16px 24px 18px;margin-bottom:8px}
 .card p{font-size:21px;line-height:1.4;color:var(--muted)}
 .card.lime{background:var(--lime);color:var(--limeink);box-shadow:none}
 .card.lime p,.card.lime h3{color:var(--limeink)}
+.card p.quote{font-family:'Outfit',sans-serif;font-weight:600;font-size:34px;line-height:1.18;letter-spacing:-.015em;color:var(--ink)}
+.card.lime p.quote{color:var(--limeink)}
+.card p.def{font-size:27px;line-height:1.38;color:var(--ink)}
 .grid{display:grid;gap:22px}
 .chip{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;background:var(--chip);font-size:20px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -120,9 +123,9 @@ body.notes-open #notes{max-height:42vh;padding:16px 24px 18px;margin-bottom:8px}
 
 /* 4 objectives */
 .objs{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:20px}
-.obj{display:flex;gap:16px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line);font-size:23px;line-height:1.32}
+.obj{display:flex;gap:16px;align-items:flex-start;padding:19px 0;border-bottom:1px solid var(--line);font-size:25px;line-height:1.32}
 .obj .ico{margin-top:3px}
-.objs .card.lime{margin-top:14px;display:flex;gap:16px;align-items:flex-start;font-size:23px;line-height:1.3;padding:22px 26px;font-weight:500}
+.objs .card.lime{margin-top:16px;display:flex;gap:16px;align-items:flex-start;font-size:25px;line-height:1.3;padding:24px 28px;font-weight:500}
 
 /* 5 icebreaker */
 .three{grid-template-columns:repeat(3,1fr)}
@@ -423,6 +426,164 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
 .rc .card{display:flex;gap:12px;align-items:flex-start;padding:20px 22px;border-radius:22px;font:500 22px/1.25 'Outfit',sans-serif}
 .rc .card .ico{margin-top:2px;color:var(--muted)}
 
+
+/* ---- Web design additions ---- */
+.n-say p.ck{font-weight:400}
+.code{background:#27251F;color:#F2EFE8;border-radius:20px;padding:20px 24px;font:500 19px/1.55 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;box-shadow:var(--shadow);white-space:pre;overflow:hidden}
+.code.sml{font-size:15px;line-height:1.5;padding:18px 20px}
+.code.xl{font-size:28px;line-height:1.6;padding:26px 32px}
+.code .l{display:block;padding:0 10px;margin:0 -10px;border-radius:6px;min-height:1.55em}
+.code .l.hd{background:rgba(255,255,255,.10)}
+.code .l.bd{background:rgba(214,232,106,.17)}
+.code .l.hi{background:rgba(214,232,106,.30)}
+.code .t{color:#D6E86A}.code .a{color:#F0B88A}.code .s{color:#A9D6B8}.code .p{color:#BDB7AA}
+.mini{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);color:#111;display:flex;flex-direction:column}
+.mini .mb{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#EDEAE3;border-bottom:1px solid rgba(0,0,0,.08)}
+.mini .mb i{width:10px;height:10px;border-radius:50%;background:#C9C3B6}
+.mini .url{margin-left:10px;flex:1;background:#fff;border-radius:999px;padding:3px 14px;font:13px 'DM Sans',sans-serif;color:#6B665C}
+.mini .mbody{padding:18px 24px 22px;flex:1}
+.sr{padding:11px 24px}
+.plain{font-family:Georgia,'Times New Roman',serif;color:#000;background:#fff;text-align:left}
+.plain h1{font:700 30px/1.2 Georgia,'Times New Roman',serif;letter-spacing:normal;margin:0 0 12px;color:#000}
+.plain h2{font:700 23px/1.2 Georgia,'Times New Roman',serif;letter-spacing:normal;margin:14px 0 10px;color:#000}
+.plain h3{font:700 19px/1.2 Georgia,'Times New Roman',serif;letter-spacing:normal;margin:12px 0 8px;color:#000}
+.plain p{margin:0 0 12px;font:400 17px/1.4 Georgia,'Times New Roman',serif;color:#000}
+.plain ul,.plain ol{margin:0 0 12px;padding-left:30px;font:400 17px/1.5 Georgia,'Times New Roman',serif;color:#000}
+.plain a{color:#0000EE;text-decoration:underline}
+.plain .ph{width:120px;height:80px;background:#e4e4e4;display:grid;place-items:center;color:#777;font:13px Arial,sans-serif;margin:0 0 12px}
+.styled{font-family:Arial,Helvetica,sans-serif;background:#f4f1ea;color:#27251f;text-align:center}
+.styled h1{font:700 30px/1.2 Arial,Helvetica,sans-serif;letter-spacing:normal;margin:0 0 12px;color:#2e7d32}
+.styled h2{font:700 22px/1.2 Arial,Helvetica,sans-serif;letter-spacing:normal;margin:14px 0 10px;color:#27251f}
+.styled p{margin:0 0 12px;font:400 17px/1.4 Arial,Helvetica,sans-serif}
+.styled ul{margin:0 0 12px;padding-left:30px;font:400 17px/1.5 Arial,Helvetica,sans-serif}
+.styled a{color:#1a5fb4}
+.cr{display:grid;grid-template-columns:1fr 56px 1fr;align-items:center;margin-top:22px}
+.cr .mid{display:grid;place-items:center;color:var(--muted)}
+.tagrow{margin-top:20px}
+.lab{font-size:19px;color:var(--muted);margin-bottom:8px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:14px}
+.ba .mini{height:360px}
+.anat{margin-top:34px;display:flex;align-items:flex-start;gap:0}
+.sg{display:flex;flex-direction:column;align-items:center;gap:10px}
+.sg code{font:500 36px/1.2 'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;white-space:pre;padding:8px 6px}
+.sg i{display:block;height:5px;border-radius:3px;width:100%}
+.sg b{font:600 22px 'Outfit',sans-serif}
+.sg span{font-size:18px;color:var(--muted);max-width:260px;text-align:center;line-height:1.35}
+.sg.o i{background:#D6E86A}.sg.c i{background:#F0B88A}.sg.x i{background:#A9D6B8}
+.sg code{color:var(--ink)}
+.vs{position:relative;width:700px;height:360px;background:#25231F;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;color:#F2EFE8;font:15px 'DM Sans',sans-serif}
+.vs .vt{height:30px;background:#171613;display:flex;align-items:center;justify-content:center;font-size:13px;color:#A9A397}
+.vs .vm{flex:1;display:flex;min-height:0}
+.vs .va{width:52px;background:#1F1D1A;display:flex;flex-direction:column;align-items:center;gap:20px;padding-top:16px;color:#A9A397}
+.vs .va .ico{width:24px;height:24px}
+.vs .va .on{color:#F2EFE8}
+.vs .vsd{width:190px;background:#2A2824;padding:12px 0;font-size:14px}
+.vs .vsd .h{padding:0 14px 10px;font-size:12px;color:#A9A397}
+.vs .vsd .f{padding:5px 14px;display:flex;gap:8px;align-items:center;color:#D8D3C8}
+.vs .vsd .f .ico{width:16px;height:16px}
+.vs .vsd .f.k{padding-left:30px}
+.vs .vsd .f.on{background:rgba(214,232,106,.18);color:#fff}
+.vs .ve{flex:1;display:flex;flex-direction:column;min-width:0}
+.vs .tabs{height:34px;background:#1F1D1A;display:flex;font-size:13px}
+.vs .tabs span{padding:0 18px;display:flex;align-items:center;color:#A9A397}
+.vs .tabs span.on{background:#2D2B28;color:#fff;border-top:2px solid #D6E86A}
+.vs .vc{flex:1;padding:14px 18px;font:500 14px/1.6 'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;background:#2D2B28;white-space:pre;overflow:hidden}
+.vs .vc .n{display:inline-block;width:30px;color:#6F6A60}
+.vs .vc .t{color:#D6E86A}.vs .vc .a{color:#F0B88A}.vs .vc .s{color:#A9D6B8}.vs .vc .p{color:#BDB7AA}
+.vs .vst{height:26px;background:#D6E86A;color:#27251F;display:flex;gap:22px;align-items:center;padding:0 14px;font-size:12.5px;font-weight:500}
+.vs .mkr{position:absolute;width:30px;height:30px;border-radius:50%;background:#D6E86A;color:#27251F;border:2px solid #27251F;display:grid;place-items:center;font:600 16px 'Outfit',sans-serif;box-shadow:0 0 0 3px rgba(255,255,255,.9)}
+.tree{padding:22px 28px}
+.tree .tr{display:flex;gap:12px;align-items:center;padding:9px 0;font:500 22px 'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace}
+.tree .tr .ico{color:var(--muted)}
+.tree .tr.kid{margin-left:34px;border-left:2px solid var(--line);padding-left:20px}
+.tree .tr .tg{margin-left:auto;font:400 17px 'DM Sans',sans-serif;color:var(--muted)}
+.loopc{padding:26px 30px}
+.loopc .lr{display:flex;gap:16px;align-items:center;padding:12px 18px;border-radius:18px;background:var(--chip);font:500 24px 'Outfit',sans-serif}
+.loopc .lr small{display:block;font:400 18px 'DM Sans',sans-serif;color:var(--muted)}
+.loopc .dn{display:grid;place-items:center;color:var(--muted);height:28px}
+.loopc .rp{text-align:center;color:var(--muted);font-size:18px;margin-top:10px}
+.props{grid-template-columns:repeat(5,1fr);gap:16px;margin-top:22px}
+.props .card{padding:20px 20px 22px;border-radius:22px;display:flex;flex-direction:column;gap:10px}
+.props code{font:600 18px 'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;color:var(--ink)}
+.props p{font-size:18px;line-height:1.35}
+.props .demo{height:92px;border-radius:14px;background:var(--chip);display:grid;place-items:center;overflow:hidden}
+.sw{grid-template-columns:repeat(4,1fr);gap:16px}
+.sw .card{padding:0;overflow:hidden;border-radius:20px}
+.sw .blk{height:62px}
+.sw .lbl2{padding:12px 16px 14px;font:600 20px 'Outfit',sans-serif}
+.sw .lbl2 small{display:block;font:400 17px 'JetBrains Mono',ui-monospace,Menlo,monospace;color:var(--muted);margin-top:2px}
+.csb{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+.csb .card{padding:22px 28px}
+.csb .r{display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line);font-size:19px;line-height:1.3}
+.csb .r:last-child{border-bottom:0}
+.csb .r code{font:600 17px 'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;color:var(--ink)}
+.csb .r span{color:var(--muted)}
+.req{display:flex;flex-direction:column}
+.req .rr{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:21px;line-height:1.3}
+.req .rr:last-child{border-bottom:0}
+.req .rr .ico{margin-top:2px;width:22px;height:22px;color:var(--muted)}
+.req h3{margin:0 0 6px}
+.kb{font:600 .85em 'JetBrains Mono',ui-monospace,Menlo,monospace;background:var(--chip);padding:2px 8px;border-radius:8px;white-space:nowrap}
+.legend .lg b code,.lg b code{font:600 .9em 'JetBrains Mono',ui-monospace,Menlo,monospace}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:middle}
+
+
+/* ---- Day 2 additions ---- */
+.wire{width:520px;display:flex;flex-direction:column;gap:10px;font:500 17px 'JetBrains Mono',ui-monospace,Menlo,monospace}
+.wire .w{border:2px solid var(--ink);border-radius:12px;padding:10px 16px;background:var(--chip)}
+.wire .w.n{background:var(--lime);color:#27251F}
+.wire .w.m{background:var(--card);padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.wire .w.m .row{display:flex;gap:10px}
+.wire .w.m .row .w{flex:1}
+.wire .w small{font:400 14px 'DM Sans',sans-serif;color:var(--muted);display:block;margin-top:2px}
+.wire .w.n small{color:#27251F}
+.ct.c3 .hd,.ct.c3 .rw{grid-template-columns:130px 250px 1fr;gap:24px}
+.ct.c3 .hd b{font-size:22px}
+.ct.c3 code{font:600 20px 'JetBrains Mono',ui-monospace,Menlo,monospace;color:var(--ink);background:var(--chip);padding:3px 10px;border-radius:8px}
+.dm{padding:12px;background:#f4f1ea;font-family:Arial,sans-serif;color:#27251f}
+.dm .bx{background:#fff;border-radius:10px;padding:10px 12px;font:600 14px Arial,sans-serif;box-shadow:0 3px 8px rgba(0,0,0,.10);color:#27251f}
+.dm.col .bx{margin-bottom:10px}
+.dm.row{display:flex;gap:10px}
+.dm.row .bx{flex:1}
+.dm p{font:14px/1.5 Arial,sans-serif;margin:0 0 8px;color:#27251f}
+.fxg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 22px;margin-top:20px}
+.fxg .fp p{font:500 16px 'JetBrains Mono',ui-monospace,Menlo,monospace;color:var(--muted);margin-bottom:6px}
+.fx{display:flex;height:92px;background:var(--chip);border-radius:14px;padding:10px;gap:8px}
+.fx i{display:block;width:44px;height:44px;background:var(--lime);border:2px solid #27251F;border-radius:10px}
+.spr{display:grid;grid-template-columns:360px 1fr 170px;gap:20px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.spr:last-child{border-bottom:0}
+.spr code{font:600 19px 'JetBrains Mono',ui-monospace,Menlo,monospace;color:var(--ink);background:var(--chip);padding:4px 10px;border-radius:8px;justify-self:start}
+.spr span.d{font-size:20px;line-height:1.3;color:var(--muted)}
+.pdd{background:#D6E86A;display:inline-block}
+.pdd i{display:block;background:#fff;font:13px Arial,sans-serif;color:#27251f;font-style:normal;padding:3px 8px}
+.phone{width:240px;height:430px;border:9px solid #27251F;border-radius:38px;background:#f4f1ea;position:relative;overflow:hidden;box-shadow:var(--shadow);flex:none}
+.phone::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:18px;background:#27251F;border-radius:0 0 12px 12px}
+.phone .ps{padding:34px 12px 12px;display:flex;flex-direction:column;gap:10px;font-family:Arial,sans-serif;color:#27251f}
+.phone .ps .ph1{background:#27251F;color:#D6E86A;font:700 16px Arial,sans-serif;padding:10px 12px;border-radius:8px}
+.phone .ps .pc{background:#fff;border-radius:12px;padding:10px 12px;font:13px Arial,sans-serif;box-shadow:0 4px 10px rgba(0,0,0,.10)}
+.phone .ps .pc b{display:block;font-size:14px;margin-bottom:2px}
+.tips{display:flex;flex-direction:column;gap:14px}
+.tips .card{padding:18px 24px}
+.tips .card p{font-size:20px;line-height:1.35;margin-top:8px}
+.site{background:#f4f1ea;color:#27251f;font-family:Arial,Helvetica,sans-serif;padding:0}
+.site h1,.site h2,.site h3{font-family:Arial,Helvetica,sans-serif;letter-spacing:normal;margin:0;color:inherit}
+.site header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#27251f}
+.site header h1{font-size:20px;color:#d6e86a}
+.site nav a{color:#fff;margin-left:16px;text-decoration:none;font-size:13px}
+.site .hero{text-align:center;padding:30px 16px 22px}
+.site .hero h2{font-size:24px;margin:0 0 8px}
+.site .hero p{font-size:14px;margin:0}
+.site .cards{display:flex;gap:12px;padding:0 20px 16px}
+.site .card{flex:1 1 100px;background:#fff;padding:14px;border-radius:14px;box-shadow:0 6px 14px rgba(0,0,0,.10);font-size:13px}
+.site .card h3{font-size:16px;margin:0 0 4px}
+.site .card p{font-size:13px;margin:0}
+.site footer{text-align:center;padding:14px;font-size:12px}
+
+.mini .mbody.dm{padding:12px}
+.mini .mbody.site{padding:0}
+.site .card p{color:#27251f}
+.site .card{margin:0}
+
 @media (max-width:640px){
   #bar{gap:8px;padding:6px 12px 12px}
   #count{min-width:52px}
@@ -434,6 +595,7 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
   background:rgba(0,0,0,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   opacity:0;pointer-events:none;transition:opacity .2s ease}
 #pwOverlay.pw-visible{opacity:1;pointer-events:all}
+#pwOverlay[hidden]{display:none}
 #pwBox{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:32px 28px 28px;
   width:min(340px,90vw);display:flex;flex-direction:column;gap:16px;
   transform:translateY(12px);transition:transform .2s ease}
@@ -491,6 +653,25 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
 <symbol id="i-square" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/></symbol>
 <symbol id="i-power" viewBox="0 0 24 24"><path d="M7 6a7.75 7.75 0 1 0 10 0"/><path d="M12 4v8"/></symbol>
 <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+
+<symbol id="i-files" viewBox="0 0 24 24"><path d="M15 3v4a1 1 0 0 0 1 1h4"/><path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z"/><path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><path d="M15 8h.01"/><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5"/><path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 11l5 5l5 -5"/><path d="M12 4v12"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="M7 8l-4 4l4 4"/><path d="M17 8l4 4l-4 4"/><path d="M14 4l-4 16"/></symbol>
+<symbol id="i-world" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"/><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/></symbol>
+<symbol id="i-save" viewBox="0 0 24 24"><path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"/><circle cx="12" cy="14" r="2"/><path d="M14 4v4h-6v-4"/></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"/><circle cx="7.5" cy="10.5" r=".5"/><circle cx="12" cy="7.5" r=".5"/><circle cx="16.5" cy="10.5" r=".5"/></symbol>
+<symbol id="i-layout" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16"/><path d="M9 9v11"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M9 15l6 -6"/><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9l-8 4.5l-8 -4.5v-9l8 -4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12v9"/><path d="M12 12l-8 -4.5"/></symbol>
+<symbol id="i-columns" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 4v16"/></symbol>
 </defs>
 </svg>
 
@@ -498,493 +679,441 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
   <main id="stageWrap" aria-label="Slides">
     <div id="sizer"><div id="stage">
 <section class="slide active" aria-label="Title">
-  <div class="crumb"><span class="pill">Nexora Digital Literacy Program</span></div>
+  <div class="crumb"><span class="pill">Web Design</span></div>
 
   <div class="t1">
     <div>
-      <h1>Foundations of Digital Literacy</h1>
-      <p class="lede">Understand devices, learn the basic operations, and get comfortable at a computer.</p>
-      <div class="chips">
-        <span class="chip"><svg class="ico"><use href="#i-users"/></svg>Beginners</span>
-        <span class="chip"><svg class="ico"><use href="#i-clock"/></svg>2 sessions plus practicals</span>
-      </div>
+      <h1>Layout &amp; Style with HTML &amp; CSS</h1>
+      <p class="lede">Build a real page layout: navigation, cards, spacing and polish.</p>
+      <div class="chips"><span class="chip"><svg class="ico"><use href="#i-layout"/></svg>Builds on Day 1</span><span class="chip"><svg class="ico"><use href="#i-code"/></svg>Two-page mini website</span></div>
     </div>
-    <div class="daycard" aria-label="Week 1"><span class="a">Week</span><span class="b">1</span><span class="c">Beginners</span></div>
+    <div class="daycard" aria-label="Day 2"><span class="a">Day</span><span class="b">2</span><span class="c">Layout</span></div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Welcome the learners and keep the pace gentle. This is a beginner class, so use simple language and expect some learners to be nervous around computers.</p><p>Teaching approach for the week: explanation, demonstration, questioning, guided practice, and individual practice.</p><p>Keys: arrow keys or space to move, N shows these notes, F goes fullscreen.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Welcome to the Nexora Digital Literacy Program. This week we start from the very beginning. You don't need to know anything about computers yet.</p><p>By the end of the week you will be able to switch on a computer, find your way around it, use the mouse and type your name. We will go one step at a time, and nobody is expected to be perfect.</p><p class="ck"><b>Check:</b> Has anyone here never touched a computer before? That's fine. You're exactly in the right place.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Welcome learners back and ask how Day 1 went. Check that everyone still has their web-day1 folder and that VS Code opens.</p><p>Day 2 builds directly on Day 1. Learners who missed Day 1 will need the About Me exercise and the VS Code setup first, so have a catch-up plan.</p><p>Keys: arrow keys or space to move, N shows these notes, F goes fullscreen.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Welcome back! Last time you built your first web page. Today we make pages look like real websites: with a navigation bar, boxes laid out side by side, proper spacing, and some polish.</p><p>By the end of today you will have a small two-page website. You'll use everything you learned on Day 1, and add some powerful new tools.</p><p class="ck"><b>Check:</b> Who remembers one thing from Day 1? Tell the class.</p></div></div>
 </section>
 
-<section class="slide" aria-label="Week goal">
-  <div class="crumb"><span class="pill">Week 1</span><span class="time">The goal</span></div>
+<section class="slide" aria-label="Day 2 goal">
+  <div class="crumb"><span class="pill">Web Design</span><span class="time">Day 2 goal</span></div>
 
-  <h2 class="statement">By the end of this week, you'll be able to sit at a computer and use it with confidence.</h2>
-  <p class="lede">You'll understand basic digital ideas, recognise common computer parts, tell a smartphone from a computer, and use the keyboard and mouse.</p>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>This is the general goal of Week 1: understand basic digital concepts, recognise common components, distinguish smartphones from computers, operate devices safely, navigate basic interfaces, and show beginner keyboard and mouse skills.</p><p>The four practical outcomes to keep in mind: typing a name, opening and closing applications, controlling the mouse, and identifying computer parts.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here is what this week is really about. We are not trying to turn you into experts. We want you to feel comfortable at a computer: know what the parts are, switch it on and off properly, move around with the mouse, and type.</p><p>Everything we learn later in this programme builds on these basics.</p></div></div>
+  <h2 class="statement">By the end of today, you'll have built a two-page mini website.</h2>
+  <p class="lede">With a navigation bar, a row of cards, nice spacing and hover effects.</p>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Show the finished site early (slide 22 has the preview). Seeing the target makes each new idea feel purposeful.</p><p>Today's new ideas: page structure tags, classes, the box model, flexbox and a bit of polish. Keep each one small and practise it straight away.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here is today's goal. You'll build a small website with two pages that link to each other. It will have a bar at the top with links, a row of cards, a footer, and some effects when you hover over things.</p><p>It will look like a real small-business website. And you'll build it with your own code.</p></div></div>
 </section>
 
 <section class="slide" aria-label="Plan">
-  <div class="crumb"><span class="pill">Week 1</span><span class="time">The plan</span></div>
+  <div class="crumb"><span class="pill">Web Design</span><span class="time">The plan</span></div>
 
-  <h2 class="title">The plan for the week</h2>
+  <h2 class="title">Today's plan</h2>
   <div class="plan">
-    <div class="pr"><span class="k">Session 1</span><span class="n">Introduction to digital literacy and computer basics</span></div>
-    <div class="pr act"><span class="k">Practical 1</span><span class="n">Identify the parts of a computer</span></div>
-    <div class="pr"><span class="k">Session 2</span><span class="n">Smartphones, switching on and off, mouse, apps, keyboard</span></div>
-    <div class="pr act"><span class="k">Practical 2</span><span class="n">Type your name and short sentences</span></div>
-    <div class="pr act"><span class="k">Challenge</span><span class="n">Put it all together at the computer</span></div>
-    <div class="pr"><span class="k">Assessment</span><span class="n">A short check, scored out of 20</span></div>
-    <div class="pr"><span class="k">Homework</span><span class="n">Devices around you, plus five questions</span></div>
+    <div class="pr"><span class="k">Warm-up</span><span class="n">Recap Day 1 and spot the bug</span></div>
+    <div class="pr"><span class="k">Part 1</span><span class="n">Page structure and links between pages</span></div>
+    <div class="pr"><span class="k">Part 2</span><span class="n">Classes and selectors</span></div>
+    <div class="pr act"><span class="k">Part 3</span><span class="n">The box model: padding, border, margin</span></div>
+    <div class="pr act"><span class="k">Part 4</span><span class="n">Layout with flexbox</span></div>
+    <div class="pr"><span class="k">Part 5</span><span class="n">Polish: shadows, hover and phone-friendly pages</span></div>
+    <div class="pr act"><span class="k">Exercise</span><span class="n">Build your two-page mini website</span></div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Recommended structure: two teaching sessions plus practical activities. The note does not fix durations, so pace each part to your group.</p><p>The lime labels are hands-on parts. Make sure every learner gets time on a real computer, not only watching.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here's how the week works. Two sessions where I explain and show you things, and practical time where you use the computers yourselves. At the end there's a small challenge, a short assessment and some homework.</p><p>The lime ones are where you use your hands. That's where most of the learning happens.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>The note does not fix durations, so adjust to your session length. The box model and flexbox are the two hardest ideas, so give them the most practice time.</p><p>Lime parts are the most hands-on. Try to alternate a short explanation with typing in VS Code.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here's our day. We start with a quick recap. Then we learn how to organise a page into parts, how to name and style groups of things, how every element is a box with space around it, and how to put boxes side by side. Then we add polish, and finally you build your mini website.</p><p>As on Day 1, you'll type real code at every step.</p></div></div>
 </section>
 
-<section class="slide" aria-label="Session 1 objectives">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Digital literacy and computer basics</span></div>
+<section class="slide" aria-label="Objectives">
+  <div class="crumb"><span class="pill">Web Design</span><span class="time">Day 2 objectives</span></div>
 
-  <h2 class="title">By the end of Session 1 you can…</h2>
+  <h2 class="title">By the end of today you can…</h2>
   <div class="objs">
     <div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Explain digital literacy in simple terms</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Identify common digital devices</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Identify the major parts of a computer</div>
+      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Structure a page with header, nav, main and footer</div>
+      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Link two pages together</div>
+      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Style groups of elements with CSS classes</div>
+      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Explain padding, border and margin</div>
     </div>
     <div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Explain what each part is for</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Tell hardware from software at an introductory level</div>
+      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Lay out items side by side with flexbox</div>
+      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Add shadows, rounded corners and hover effects</div>
+      <div class="card lime"><svg class="ico"><use href="#i-target"/></svg><span>Build a two-page mini website</span></div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Materials for Session 1: computer or laptop, smartphone, keyboard, mouse, monitor, projector if available, flash drive, charger, printed images of computer components, whiteboard, markers and notebooks.</p><p>Real equipment makes this session much easier. If you have few machines, rotate groups.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>In this first session we answer three simple questions. What is digital literacy? What devices do we use? And what are the parts of a computer?</p><p>By the end you will be able to name the main parts and say what each one does.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Point to the lime card. Everything else is a step towards it.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>These are today's goals. Don't memorise them. Look at the lime one: a two-page mini website. Every new idea today is a tool for building it.</p></div></div>
 </section>
 
-<section class="slide" aria-label="Opening questions">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Starting point</span></div>
+<section class="slide" aria-label="Recap quiz">
+  <div class="crumb"><span class="pill">Warm-up</span><span class="time">Recap of Day 1</span></div>
 
-  <h2 class="title">How many of you used a phone before class today?</h2>
-  <div class="grid three mt">
-    <div class="card"><h3>What did you use it for?</h3><p>Calls, messages, videos, something else?</p></div>
-    <div class="card"><h3>Have you used a computer?</h3><p>Where, and how often?</p></div>
-    <div class="card"><h3>What do you normally do on a phone or computer?</h3><p>Think of a normal day.</p></div>
+  <h2 class="title">Warm-up: what do you remember?</h2>
+  <div class="qa"><details class="qd"><summary><span>What is the job of HTML, and the job of CSS?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">HTML gives the page its structure and content. CSS controls how it looks.</p></details><details class="qd"><summary><span>How do you make a link, and which attribute holds its address?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">With the a tag. The href attribute holds the address.</p></details><details class="qd"><summary><span>What are the three parts of a CSS rule?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">The selector, the property and the value. For example: h1 { color: green; }</p></details><details class="qd"><summary><span>How do you connect style.css to a page?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">Add a link tag inside the head, with href="style.css".</p></details><details class="qd"><summary><span>What are the three steps of the loop you repeat all day?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">Edit, save (Ctrl+S), refresh the browser.</p></details></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Ask these out loud before revealing the answer. Pick different learners each time. Use this to find who needs extra help today.</p><p>If answers are weak, spend five minutes redoing a Day 1 example in VS Code before moving on. Today's work depends on it.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Before we start something new, let's wake up your memory. I'll ask a question. Try to answer in your own words, and then we'll check together. It's fine if you've forgotten. That's why we revise.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Spot the bug">
+  <div class="crumb"><span class="pill">Warm-up</span><span class="time">Debugging</span></div>
+
+  <h2 class="title">Spot the three bugs</h2>
+  <p class="lede" style="font-size:22px;margin-top:8px">The folder has a file called <span class="kb">style.css</span>. Find what is wrong in each snippet.</p>
+  <div class="grid" style="grid-template-columns:1.2fr 1fr;gap:22px;margin-top:18px;align-items:start">
+    <div><p class="lab" style="margin-bottom:6px">index.html</p><div class="code sml" style="font-size:15px"><span class="l "><span class="p">&lt;</span><span class="t">head</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">title</span><span class="p">&gt;</span>My Page<span class="p">&lt;/</span><span class="t">title</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">link</span> <span class="a">rel</span><span class="p">=</span><span class="s">"stylesheet"</span> <span class="a">href</span><span class="p">=</span><span class="s">"styles.css"</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">head</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;</span><span class="t">body</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">h1</span><span class="p">&gt;</span>Welcome<span class="p">&lt;</span><span class="t">h1</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">body</span><span class="p">&gt;</span></span></div></div>
+    <div><p class="lab" style="margin-bottom:6px">style.css</p><div class="code sml" style="font-size:15px"><span class="l "><span class="t">h1</span> <span class="p">{</span></span><span class="l ">  color green;</span><span class="l "><span class="p">}</span></span></div></div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Ask these questions and let several learners answer. Don't correct anything yet.</p><p>Listen for how learners already use devices (calls, WhatsApp, videos). This tells you the starting level of the class and gives you examples to refer back to.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Let's start with you. Hands up: who used a phone today? What did you use it for? And a computer: has anyone used one? What did you do on it?</p><p>There are no wrong answers here. I just want to know where we are starting from.</p></div></div>
+  <details class="qd" style="margin-top:18px"><summary><span>Show the bugs</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">1) href="styles.css" should be "style.css". 2) The closing tag needs a slash: &lt;/h1&gt;. 3) A colon is missing: color: green;</p></details>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Give learners a minute or two in pairs, then reveal. The three bugs are classic Day 1 mistakes: a file name that doesn't match, a missing slash in a closing tag, and a missing colon in CSS.</p><p>Emphasise a debugging routine: read slowly, compare with a working example, check file names and punctuation.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here are three snippets with one bug each. Look carefully. In the first, the link says styles.css, but our file is called style.css. In the second, the closing tag is missing its slash. And in the CSS, there's a colon missing. Tiny mistakes, big effects. Real developers spend lots of time hunting bugs like these, so training your eyes is a real skill.</p><p class="ck"><b>Check:</b> Which bug would stop your CSS file loading at all?</p></div></div>
 </section>
 
-<section class="slide" aria-label="What is digital literacy">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">What is digital literacy?</span></div>
+<section class="slide" aria-label="Page structure">
+  <div class="crumb"><span class="pill">Part 1</span><span class="time">Page structure</span></div>
 
-  <h2 class="title">What is digital literacy?</h2>
-  <p class="lede" style="font-size:23px">Using a device doesn't automatically make someone fully digitally literate.</p>
-  <div class="grid two" style="margin-top:24px">
-    <div class="card lime" style="padding:32px 36px;display:flex;flex-direction:column;gap:16px">
-      <p class="sm" style="color:var(--limeink)">Digital literacy is</p>
-      <p class="quote">the ability to use digital devices, technology, applications and information correctly, safely and effectively.</p>
-    </div>
-    <div class="card" style="padding:30px 32px">
-      <h3 style="margin-bottom:16px">A digitally literate person can gradually…</h3>
-      <div class="chips"><span class="chip">Operate devices</span><span class="chip">Type and create information</span><span class="chip">Communicate digitally</span><span class="chip">Find information</span><span class="chip">Use applications</span><span class="chip">Manage files</span><span class="chip">Protect personal information</span><span class="chip">Solve simple digital problems</span></div>
+  <h2 class="title">Give your page a structure</h2>
+  <div class="dsplit" style="margin-top:18px"><div class="wire" role="img" aria-label="Page layout with header, nav, main, sections and footer">
+  <div class="w">&lt;header&gt;</div>
+  <div class="w n">&lt;nav&gt;</div>
+  <div class="w m">&lt;main&gt;<div class="row"><div class="w">&lt;section&gt;</div><div class="w">&lt;section&gt;</div></div></div>
+  <div class="w">&lt;footer&gt;</div>
+</div>
+    <div class="legend c">
+      <div class="lg"><span class="no"><svg class="ico" style="width:18px;height:18px"><use href="#i-layout"/></svg></span><div><b>&lt;header&gt;</b><span>The top of the page: the name, logo and title.</span></div></div>
+      <div class="lg"><span class="no"><svg class="ico" style="width:18px;height:18px"><use href="#i-link"/></svg></span><div><b>&lt;nav&gt;</b><span>Links to the other pages.</span></div></div>
+      <div class="lg"><span class="no"><svg class="ico" style="width:18px;height:18px"><use href="#i-files"/></svg></span><div><b>&lt;main&gt;</b><span>The main content of the page.</span></div></div>
+      <div class="lg"><span class="no"><svg class="ico" style="width:18px;height:18px"><use href="#i-columns"/></svg></span><div><b>&lt;section&gt;</b><span>A group of related content inside main.</span></div></div>
+      <div class="lg"><span class="no"><svg class="ico" style="width:18px;height:18px"><use href="#i-layout"/></svg></span><div><b>&lt;footer&gt;</b><span>The bottom: hours, contact, copyright.</span></div></div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Make the point that using a device does not automatically mean someone is fully digitally literate.</p><p>Do not expect learners to recite the definition. Aim for a simple restatement in their own words.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Digital literacy means being able to use digital technology well, safely and sensibly. Many people can use a phone, but being digitally literate goes further.</p><p>It means you can operate devices, type, communicate, find information, use apps, keep your files organised, protect your personal information, and fix small problems. You will build these skills one at a time, starting this week.</p><p class="ck"><b>Check:</b> In your own words, what is digital literacy?</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>These are called semantic tags: they describe the role of each part. Without CSS they look the same as a plain div, but they help browsers, search engines and screen readers understand the page.</p><p>Draw this layout on the board and ask learners to sketch a website they know and label its header, nav, main and footer.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Think of a house. The header is the front entrance, with the name of the house. The nav is the signs that tell you which rooms you can go to. The main is the living room, where most things happen. The footer is the back door, with information like opening hours. A web page is organised in the same way.</p><p>Each part has its own tag, so your code is tidy and easy to understand.</p><p class="ck"><b>Check:</b> Which tag would you use for the links to other pages?</p></div></div>
 </section>
 
-<section class="slide" aria-label="Classroom example">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">A classroom example</span></div>
+<section class="slide" aria-label="Semantic code">
+  <div class="crumb"><span class="pill">Part 1</span><span class="time">Page structure</span></div>
 
-  <h2 class="title">Some skills already. More to learn.</h2>
-  <p class="lede" style="font-size:23px">Making a WhatsApp call is a real skill. Being digitally literate goes further.</p>
-  <div class="grid dual">
-    <div class="card" style="display:flex;flex-direction:column;gap:14px">
-      <h3>You can already…</h3>
-      <p class="quote" style="color:var(--ink)">Make a WhatsApp call</p>
-      <p>That's a genuine digital skill.</p>
+  <h2 class="title">The structure in code</h2>
+  <div style="display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;margin-top:18px"><div class="code " style="font-size:17px;width:560px;line-height:1.5"><span class="l "><span class="p">&lt;</span><span class="t">body</span><span class="p">&gt;</span></span><span class="l hd">  <span class="p">&lt;</span><span class="t">header</span><span class="p">&gt;</span></span><span class="l hd">    <span class="p">&lt;</span><span class="t">h1</span><span class="p">&gt;</span>Sweet Bites<span class="p">&lt;/</span><span class="t">h1</span><span class="p">&gt;</span></span><span class="l hd">    <span class="p">&lt;</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l hd">      <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l hd">      <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"about.html"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l hd">    <span class="p">&lt;/</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l hd">  <span class="p">&lt;/</span><span class="t">header</span><span class="p">&gt;</span></span><span class="l bd">  <span class="p">&lt;</span><span class="t">main</span><span class="p">&gt;</span></span><span class="l bd">    <span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>The main content goes here.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span></span><span class="l bd">  <span class="p">&lt;/</span><span class="t">main</span><span class="p">&gt;</span></span><span class="l hi">  <span class="p">&lt;</span><span class="t">footer</span><span class="p">&gt;</span></span><span class="l hi">    <span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>Open every day<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span></span><span class="l hi">  <span class="p">&lt;/</span><span class="t">footer</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">body</span><span class="p">&gt;</span></span></div>
+    <div class="stp" style="gap:14px">
+      <div class="card" style="padding:20px 26px"><h3>Nesting</h3><p>The nav sits inside the header. Indent the inner tags so you can see what is inside what.</p></div>
+      <div class="card lime" style="padding:20px 26px"><p style="font-size:22px;line-height:1.35">These tags don't change how things look on their own. They give your page structure. Looks come from CSS.</p></div>
     </div>
-    <div class="card">
-      <h3>Still to learn…</h3>
-      <div class="lst">
-        <div><svg class="ico"><use href="#i-arrow"/></svg>Save a document</div>
-        <div><svg class="ico"><use href="#i-arrow"/></svg>Create a folder</div>
-        <div><svg class="ico"><use href="#i-arrow"/></svg>Send an email attachment</div>
-        <div><svg class="ico"><use href="#i-arrow"/></svg>Protect a password</div>
+  </div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Learners type this inside their body tag. Check indentation: two spaces per level makes nesting visible. VS Code can auto-indent as they type.</p><p>Pairs of tags must be properly nested: the nav tag opens and closes inside the header. Mismatched nesting is a common source of weird layouts.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here is how that structure looks in code. The header holds the site name and the nav. The nav holds the links. Then main holds the page content, and footer closes the page. See how tags sit inside each other, like boxes inside boxes? We indent the inner ones so we can see the nesting at a glance.</p><p>On their own, these tags don't change how the page looks. They just organise it. The looks come from CSS.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Links between pages">
+  <div class="crumb"><span class="pill">Part 1</span><span class="time">Linking pages</span></div>
+
+  <h2 class="title">Link your pages together</h2>
+  <div class="sidec">
+    <div>
+      <div class="card tree">
+        <div class="tr"><svg class="ico"><use href="#i-folder"/></svg>web-day2</div>
+        <div class="tr kid"><svg class="ico"><use href="#i-file"/></svg>index.html<span class="tg">Home page</span></div>
+        <div class="tr kid"><svg class="ico"><use href="#i-file"/></svg>about.html<span class="tg">About page</span></div>
+        <div class="tr kid"><svg class="ico"><use href="#i-file"/></svg>style.css<span class="tg">shared styles</span></div>
       </div>
+      <div class="card lime" style="margin-top:18px;padding:20px 26px;display:flex;gap:14px;align-items:flex-start"><svg class="ico" style="width:28px;height:28px"><use href="#i-alert"/></svg><p style="font-size:21px;line-height:1.35">Both pages use the same <b>style.css</b>, so the whole site looks consistent.</p></div>
+    </div>
+    <div><div class="code " style="font-size:20px"><span class="l "><span class="p">&lt;</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l hi">  <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l hi">  <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"about.html"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">nav</span><span class="p">&gt;</span></span></div>
+      <p class="sm" style="margin-top:14px">The <span class="kb">href</span> is the file name of the page to open. Both files must sit in the same folder.</p>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Use the WhatsApp example from the note. Be encouraging: learners already have real skills, and the point is to show what comes next, not to make anyone feel behind.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Think of someone who makes WhatsApp calls every day. That's a real skill. But can they save a document, make a folder, send an email attachment or keep a password safe?</p><p>If not, that is not a failure. It simply shows what is still waiting to be learned. This programme is about that second list.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>For a link to another page in the same folder, href is simply the file name. Typos in the file name give a 'not found' page. Have learners click both links to test them.</p><p>Put the same nav on every page so visitors can always get around.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>A website is usually many pages that link to each other. To link to another page in the same folder, we just use its file name as the href. So href equals about.html opens the About page. Put the same nav on every page, so visitors can always find their way.</p><p>Notice that all pages share one style.css file. Change a colour there, and every page changes.</p><p class="ck"><b>Check:</b> If the About page isn't opening, what two things do you check first?</p></div></div>
 </section>
 
-<section class="slide" aria-label="Why it matters">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Why it matters</span></div>
+<section class="slide" aria-label="Classes">
+  <div class="crumb"><span class="pill">Part 2</span><span class="time">Classes and selectors</span></div>
 
-  <h2 class="title">Why digital literacy matters</h2>
-  <div class="grid pg sm"><div class="card">Education</div><div class="card">Employment</div><div class="card">Communication</div><div class="card">Business</div><div class="card">Banking</div><div class="card">Government services</div><div class="card">Research</div><div class="card">Creativity</div><div class="card">Everyday problem-solving</div></div>
-  <div class="chips mt">
-    <span class="chip"><svg class="ico"><use href="#i-pencil"/></svg>A student writes an assignment on a computer</span>
-    <span class="chip"><svg class="ico"><use href="#i-chat"/></svg>A business owner messages customers on a smartphone</span>
-    <span class="chip"><svg class="ico"><use href="#i-notes"/></svg>An office worker prepares reports</span>
+  <h2 class="title">Classes: name tags for your elements</h2>
+  <div class="cr">
+    <div style="display:flex;flex-direction:column;gap:14px"><div class="code sml" style="font-size:17px"><span class="l "><span class="p">&lt;</span><span class="t">div</span> <span class="a">class</span><span class="p">=</span><span class="s">"card"</span><span class="p">&gt;</span>Bread<span class="p">&lt;/</span><span class="t">div</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;</span><span class="t">div</span> <span class="a">class</span><span class="p">=</span><span class="s">"card"</span><span class="p">&gt;</span>Cakes<span class="p">&lt;/</span><span class="t">div</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;</span><span class="t">div</span><span class="p">&gt;</span>Plain box<span class="p">&lt;/</span><span class="t">div</span><span class="p">&gt;</span></span></div><div class="code sml" style="font-size:17px"><span class="l "><span class="t">.card</span> <span class="p">{</span></span><span class="l ">  <span class="a">background</span><span class="p">:</span> <span class="s">#f4f1ea</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">12px</span><span class="p">;</span></span><span class="l ">  <span class="a">border-radius</span><span class="p">:</span> <span class="s">10px</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div></div><div class="mid"><svg class="ico" style="width:32px;height:32px"><use href="#i-arrow"/></svg></div><div class="mini" style="height:260px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody plain"><div style="background:#f4f1ea;padding:12px;border-radius:10px;margin-bottom:10px;font:15px Arial,sans-serif">Bread</div><div style="background:#f4f1ea;padding:12px;border-radius:10px;margin-bottom:10px;font:15px Arial,sans-serif">Cakes</div><div style="font:15px Arial,sans-serif;padding:12px 0">Plain box</div></div></div></div>
+  <div class="chips mt"><span class="chip"><b>class="card"</b> in HTML: no dot</span><span class="chip"><b>.card</b> in CSS: with a dot</span></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>A class lets you style some elements but not others, and reuse the style on as many elements as you like. Common slip: forgetting the dot in CSS or adding a dot in the HTML.</p><p>A div is a generic box: a container with no meaning of its own. It is how we group content for styling.</p><p>Class names: lowercase, no spaces, describe the purpose (card, hero, button).</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Sometimes we want to style some things but not others. Not every box should look like a card. So we give the ones we want a class, which works like a name tag. In the HTML we write class equals card. In the CSS, we write a dot and then the same name: dot card. Now every element with that name tag gets the style.</p><p>Think of a school uniform. Everyone wearing the school badge gets the uniform look, and the others don't. Notice the plain box has no class, so it gets no style.</p><p class="ck"><b>Check:</b> How do you write the class in HTML, and how in CSS?</p></div></div>
+</section>
+
+<section class="slide" aria-label="Selectors">
+  <div class="crumb"><span class="pill">Part 2</span><span class="time">Classes and selectors</span></div>
+
+  <h2 class="title">Selectors you'll use</h2>
+  <div class="card ct c3">
+    <div class="hd"><b>Type</b><b>CSS</b><b>Selects</b></div>
+    <div class="rw"><span>Element</span><span><code>p { }</code></span><span>All p elements</span></div><div class="rw"><span>Class</span><span><code>.card { }</code></span><span>Elements with class="card"</span></div><div class="rw"><span>ID</span><span><code>#hero { }</code></span><span>The one element with id="hero"</span></div><div class="rw"><span>Group</span><span><code>h1, h2 { }</code></span><span>All h1 and all h2 elements</span></div><div class="rw"><span>Inside</span><span><code>nav a { }</code></span><span>Only links inside a nav</span></div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Link this to learners' own goals: study, work, business, banking, government services. Ask which area matters most to them.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Why bother? Because digital skills touch almost every part of life: school, jobs, talking to people, running a business, banking, government services, research, creativity and solving everyday problems.</p><p>A student writes assignments on a computer. A business owner talks to customers on a smartphone. An office worker prepares reports.</p><p class="ck"><b>Check:</b> Which of these is closest to your own life?</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>A selector says which elements a rule applies to. IDs must be unique on a page, while classes can repeat. Classes are used far more often. Keep IDs for one-off elements such as the main hero.</p><p>The descendant selector (nav a) is powerful: it avoids adding classes to every link. Show it live: change nav a colour and watch only the nav links change.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>You already know the element selector, like p. Here are four more. A class selector uses a dot, and styles everything with that class. An ID selector uses a hash, and styles one unique element. You can group selectors with commas, to style h1 and h2 the same way. And you can select things inside other things: nav a means only links inside the nav.</p><p>For most of today we'll use element selectors and classes.</p><p class="ck"><b>Check:</b> What does the selector nav a select?</p></div></div>
 </section>
 
-<section class="slide" aria-label="Digital devices">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Digital devices</span></div>
+<section class="slide" aria-label="Box model">
+  <div class="crumb"><span class="pill">Part 3</span><span class="time">The box model</span></div>
 
-  <h2 class="title">Digital devices</h2>
-  <p class="lede" style="font-size:23px">An electronic device that can process, store or communicate digital information.</p>
-  <div class="grid dv"><div class="card"><svg class="ico"><use href="#i-phone"/></svg><b>Smartphone</b></div><div class="card"><svg class="ico"><use href="#i-desktop"/></svg><b>Desktop computer</b></div><div class="card"><svg class="ico"><use href="#i-laptop"/></svg><b>Laptop</b></div><div class="card"><svg class="ico"><use href="#i-tablet"/></svg><b>Tablet</b></div><div class="card"><svg class="ico"><use href="#i-tv"/></svg><b>Smart television</b></div><div class="card"><svg class="ico"><use href="#i-camera"/></svg><b>Digital camera</b></div><div class="card"><svg class="ico"><use href="#i-watch"/></svg><b>Smartwatch</b></div>
-    <div class="card lime">Which of these have you used before?</div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Show real devices wherever possible: hold up the smartphone, the laptop, any tablet or camera you have.</p><p>Ask which devices learners have used and let them describe what they did on them.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>A digital device is an electronic device that can handle digital information. It can process it, store it, or send it to someone else.</p><p>Look at the list: smartphones, desktop computers, laptops, tablets, smart TVs, digital cameras and smartwatches. Some of them are in this room.</p><p class="ck"><b>Check:</b> Which of these have you used before?</p></div></div>
-</section>
-
-<section class="slide" aria-label="Desktop computer parts">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Parts of a computer</span></div>
-
-  <h2 class="title">Parts of a desktop computer</h2>
-  <div class="dsplit"><svg class="dg" viewBox="0 0 600 420" style="height:430px;width:auto" role="img" aria-label="Desktop computer with monitor, keyboard, mouse and system unit">
-<rect class="fl" x="40" y="20" width="330" height="220" rx="18"/>
-<rect class="scr" x="60" y="40" width="290" height="180" rx="8"/>
-<rect class="fl" x="190" y="240" width="30" height="34"/>
-<rect class="fl" x="140" y="274" width="130" height="14" rx="7"/>
-<rect class="fl" x="430" y="40" width="120" height="248" rx="14"/>
-<circle class="ln" cx="490" cy="76" r="9"/><path class="ln" d="M490 70v7"/>
-<path class="ln" d="M455 130h70M455 150h70"/>
-<rect class="ln" x="462" y="196" width="26" height="10" rx="2"/><rect class="ln" x="494" y="196" width="26" height="10" rx="2"/>
-<rect class="fl" x="60" y="322" width="290" height="70" rx="12"/>
-<path class="keys" d="M80 342H330M80 358H330"/><path class="sp" d="M125 376H285"/>
-<rect class="fl" x="400" y="322" width="46" height="70" rx="23"/><path class="ln" d="M423 322v28M400 350h46"/>
-<path class="ln" d="M423 322C423 304 478 306 478 288"/>
-<g><circle class="mk" cx="205" cy="130" r="14"/><text x="205" y="131">1</text></g><g><circle class="mk" cx="205" cy="357" r="14"/><text x="205" y="358">2</text></g><g><circle class="mk" cx="423" cy="376" r="14"/><text x="423" y="377">3</text></g><g><circle class="mk" cx="490" cy="240" r="14"/><text x="490" y="241">4</text></g></svg>
+  <h2 class="title">Every element is a box</h2>
+  <div class="dsplit" style="margin-top:12px"><svg class="dg" viewBox="0 0 520 380" style="height:380px;width:auto" role="img" aria-label="The box model: margin, border, padding and content">
+<rect x="10" y="10" width="500" height="360" rx="12" fill="#F3E3C3" stroke="#27251F" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="70" y="70" width="380" height="240" fill="#DCE8B0" stroke="#27251F" stroke-width="10"/>
+<rect x="150" y="140" width="220" height="100" fill="#FBF9F5" stroke="#27251F" stroke-width="2"/>
+<text class="lbl" x="260" y="190" style="fill:#27251F;font-size:18px">Your content</text>
+<g><circle class="mk" cx="40" cy="40" r="14"/><text x="40" y="41">1</text></g><g><circle class="mk" cx="260" cy="70" r="14"/><text x="260" y="71">2</text></g><g><circle class="mk" cx="110" cy="110" r="14"/><text x="110" y="111">3</text></g><g><circle class="mk" cx="260" cy="160" r="14"/><text x="260" y="161">4</text></g></svg>
     <div class="legend">
-      <div class="lg"><span class="no">1</span><div><b>Monitor</b><span>Displays information, pictures, videos and applications.</span></div></div>
-      <div class="lg"><span class="no">2</span><div><b>Keyboard</b><span>Types letters, numbers, symbols and commands.</span></div></div>
-      <div class="lg"><span class="no">3</span><div><b>Mouse</b><span>Points, selects, clicks, drags and opens items.</span></div></div>
-      <div class="lg"><span class="no">4</span><div><b>System unit</b><span>Holds the major parts that process information.</span></div></div>
+      <div class="lg"><span class="no">1</span><div><b>Margin</b><span>Space outside the border. It pushes other elements away.</span></div></div>
+      <div class="lg"><span class="no">2</span><div><b>Border</b><span>The line around the box.</span></div></div>
+      <div class="lg"><span class="no">3</span><div><b>Padding</b><span>Space inside the border, around the content.</span></div></div>
+      <div class="lg"><span class="no">4</span><div><b>Content</b><span>Your text, image or other elements.</span></div></div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Use the real equipment. Hold or point to each part and ask: What is this called? Then: What do we use it for? Let learners answer before you explain.</p><p>Printed pictures of the components help if you have few machines. The picture here is a simplified illustration.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Let's look at a desktop computer. The monitor is the screen: it shows us information, pictures, videos and apps. The keyboard is how we type letters, numbers, symbols and commands. The mouse lets us point at things, click them, drag them and open them. The system unit is the box that holds the main parts that do the processing.</p><p>Now look at the real ones. Point to the monitor. What is it called? What do we use it for?</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>The box model is one of the most important ideas in CSS. Every element, even a paragraph, is a rectangular box with these four layers. Use real objects: bring a small gift in a box, wrapped in bubble wrap and placed on a shelf, if you can.</p><p>In the browser, right-click an element and choose Inspect to see its box model in the developer tools. Show it live for a minute: it makes this concrete.</p><p>The picture is a simplified illustration.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here's one of the most useful ideas in CSS. Every element on a web page is a box. Think of a gift. The gift itself is the content. The bubble wrap around it is the padding. The cardboard box is the border. And the space between your box and the next one on the shelf is the margin.</p><p>Padding is space inside, margin is space outside. If you remember only that, you've got it.</p><p class="ck"><b>Check:</b> Is padding inside or outside the border? What about margin?</p></div></div>
 </section>
 
-<section class="slide" aria-label="Laptop parts and ports">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Parts of a computer</span></div>
+<section class="slide" aria-label="Box model CSS">
+  <div class="crumb"><span class="pill">Part 3</span><span class="time">The box model</span></div>
 
-  <h2 class="title">Laptop parts and ports</h2>
-  <div class="dsplit"><svg class="dg" viewBox="0 0 600 500" style="height:440px;width:auto" role="img" aria-label="Laptop with webcam, speakers and touchpad, and a side view showing ports">
-<rect class="fl" x="100" y="20" width="400" height="250" rx="18"/>
-<rect class="scr" x="120" y="44" width="360" height="204" rx="6"/>
-<circle class="ln" cx="300" cy="32" r="4"/>
-<rect class="fl" x="40" y="280" width="520" height="100" rx="16"/>
-<path class="keys" d="M95 302H505M95 318H505M95 334H505"/>
-<path class="keys" d="M62 300v60M538 300v60"/>
-<rect class="ln" x="245" y="346" width="110" height="24" rx="6"/>
-<text class="lbl" x="300" y="404">Side of the laptop (simplified)</text>
-<rect class="fl" x="40" y="416" width="520" height="52" rx="14"/>
-<rect class="ln" x="92" y="434" width="36" height="16" rx="3"/><path class="ln" d="M100 442h20"/>
-<path class="ln" d="M210 435h40l-5 14h-30z"/>
-<circle class="ln" cx="350" cy="442" r="9"/><circle class="ln" cx="350" cy="442" r="3"/>
-<circle class="ln" cx="470" cy="442" r="10"/><path class="ln" d="M470 434v8"/>
-<g><circle class="mk" cx="338" cy="32" r="14"/><text x="338" y="33">1</text></g><g><circle class="mk" cx="62" cy="330" r="14"/><text x="62" y="331">2</text></g><g><circle class="mk" cx="300" cy="358" r="14"/><text x="300" y="359">3</text></g><g><circle class="mk" cx="110" cy="485" r="14"/><text x="110" y="486">4</text></g><g><circle class="mk" cx="230" cy="485" r="14"/><text x="230" y="486">5</text></g><g><circle class="mk" cx="350" cy="485" r="14"/><text x="350" y="486">6</text></g><g><circle class="mk" cx="470" cy="485" r="14"/><text x="470" y="486">7</text></g></svg>
-    <div class="legend c">
-      <div class="lg"><span class="no">1</span><div><b>Webcam</b><span>Captures video and images.</span></div></div>
-      <div class="lg"><span class="no">2</span><div><b>Speakers</b><span>Produce sound.</span></div></div>
-      <div class="lg"><span class="no">3</span><div><b>Touchpad</b><span>Works like a mouse.</span></div></div>
-      <div class="lg"><span class="no">4</span><div><b>USB port</b><span>Connects flash drives, keyboards, phones and more.</span></div></div>
-      <div class="lg"><span class="no">5</span><div><b>HDMI port</b><span>Connects to a monitor, TV or projector.</span></div></div>
-      <div class="lg"><span class="no">6</span><div><b>Audio port</b><span>Connects headphones or a microphone.</span></div></div>
-      <div class="lg"><span class="no">7</span><div><b>Charger or power port</b><span>Supplies power to the device.</span></div></div>
+  <h2 class="title">The box model in CSS</h2>
+  <div class="cr"><div class="code " style="font-size:20px;padding:24px 28px"><span class="l "><span class="t">.box</span> <span class="p">{</span></span><span class="l ">  <span class="a">width</span><span class="p">:</span> <span class="s">200px</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">20px</span><span class="p">;</span></span><span class="l ">  <span class="a">border</span><span class="p">:</span> <span class="s">4px solid #27251f</span><span class="p">;</span></span><span class="l ">  <span class="a">margin</span><span class="p">:</span> <span class="s">24px</span><span class="p">;</span></span><span class="l ">  <span class="a">background-color</span><span class="p">:</span> <span class="s">#d6e86a</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div><div class="mid"><svg class="ico" style="width:32px;height:32px"><use href="#i-arrow"/></svg></div><div class="mini" style="height:290px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody plain"><div style="outline:2px dashed #9a948a;padding:24px;display:inline-block;background:#fff"><div style="width:200px;padding:20px;border:4px solid #27251f;background:#d6e86a;font:600 16px Arial,sans-serif;color:#27251f">Content</div></div><p style="font:14px Arial,sans-serif;color:#6B665C;margin-top:10px">The dashed line shows the margin.</p></div></div></div>
+  <div class="chips mt"><span class="chip"><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">width</code> how wide the content is</span><span class="chip"><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">padding</code> inside space</span><span class="chip"><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">border</code> size, style, colour</span><span class="chip"><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">margin</code> outside space</span></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Type this live and change each value to show its effect: raise padding, thicken the border, increase margin. The border property takes three values: size, style and colour.</p><p>Advanced tip for later: adding box-sizing: border-box makes widths include padding and border, which is easier to reason about. Don't introduce it today unless asked.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Now in CSS. The width sets how wide the content is. The padding adds space inside. The border draws the line: it takes a thickness, a style, like solid, and a colour. And the margin adds space outside the box.</p><p>Try changing the numbers. Make the padding bigger and watch the lime box grow around the text. Make the margin bigger and watch the box move away from its neighbours.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Spacing shorthand">
+  <div class="crumb"><span class="pill">Part 3</span><span class="time">The box model</span></div>
+
+  <h2 class="title">Shortcuts for spacing</h2>
+  <div class="card" style="padding:8px 28px;margin-top:16px">
+    <div class="spr"><code>padding: 10px;</code><span class="d">One value: all four sides</span><span class="pdd" style="padding:10px"><i>text</i></span></div>
+    <div class="spr"><code>padding: 8px 24px;</code><span class="d">Two values: top and bottom, then left and right</span><span class="pdd" style="padding:8px 24px"><i>text</i></span></div>
+    <div class="spr"><code>padding: 4px 10px 18px 24px;</code><span class="d">Four values: top, right, bottom, left (clockwise)</span><span class="pdd" style="padding:4px 10px 18px 24px"><i>text</i></span></div>
+    <div class="spr"><code>margin: 0 auto;</code><span class="d">No space above or below, and centre a box with a set width</span><div style="background:var(--chip);padding:6px;border-radius:8px"><div style="width:70px;margin:0 auto;background:#D6E86A;border-radius:6px;text-align:center;font:13px Arial,sans-serif;color:#27251f;padding:4px 0">box</div></div></div>
+  </div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Clockwise order for four values: top, right, bottom, left. A helpful memory aid is 'TRouBLe'. Two values are vertical then horizontal.</p><p>margin: 0 auto only centres a block that has a width or max-width set. Demonstrate with and without a width.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>You don't have to write padding four times. With one value, it applies to all four sides. With two values, the first is top and bottom, and the second is left and right. With four, go clockwise: top, right, bottom, left, like the hands of a clock.</p><p>And here's a useful trick: margin zero auto centres a box on the page, as long as the box has a width. Zero is for top and bottom, and auto means 'share the left and right space equally'.</p><p class="ck"><b>Check:</b> What does padding: 10px 30px do?</p></div></div>
+</section>
+
+<section class="slide" aria-label="Centred column">
+  <div class="crumb"><span class="pill">Part 3</span><span class="time">The box model</span></div>
+
+  <h2 class="title">Keep text easy to read</h2>
+  <div class="ba">
+    <div><p class="lab">No width limit: lines stretch too far</p><div class="mini" style="height:230px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody dm"><p>Sweet Bites bakes fresh bread, soft cakes and tasty snacks every morning for families, offices and parties in town. Come early for the warm loaves.</p></div></div></div>
+    <div><p class="lab">With max-width and margin: 0 auto</p><div class="mini" style="height:230px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody dm"><div style="max-width:60%;margin:0 auto"><p>Sweet Bites bakes fresh bread, soft cakes and tasty snacks every morning for families, offices and parties in town. Come early for the warm loaves.</p></div></div></div></div>
+  </div>
+  <div class="code sml" style="font-size:18px;margin-top:20px;display:inline-block;padding:16px 28px"><span class="l "><span class="t">.container</span> <span class="p">{</span></span><span class="l ">  <span class="a">max-width</span><span class="p">:</span> <span class="s">600px</span><span class="p">;</span></span><span class="l ">  <span class="a">margin</span><span class="p">:</span> <span class="s">0 auto</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>On a wide screen, very long lines of text are tiring to read. A max-width keeps the content to a comfortable width. margin: 0 auto centres it. Unlike width, max-width allows the box to shrink on small screens.</p><p>Show the effect by dragging the browser window wider and narrower.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Look at the left. On a big screen, the text stretches all the way across and each line is very long. That's tiring to read. On the right, we put a max-width on the text and centre it with margin zero auto. Now the lines are shorter and the page looks tidy.</p><p>Max-width means 'be this wide at most'. On a small screen, the box can still shrink, which is what we want.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Flexbox row">
+  <div class="crumb"><span class="pill">Part 4</span><span class="time">Flexbox layout</span></div>
+
+  <h2 class="title">Flexbox: put boxes side by side</h2>
+  <div style="display:flex;gap:30px;align-items:flex-start;margin-top:14px"><div class="code " style="font-size:22px;width:360px;padding:24px 28px;flex:none"><span class="l "><span class="t">.cards</span> <span class="p">{</span></span><span class="l ">  <span class="a">display</span><span class="p">:</span> <span class="s">flex</span><span class="p">;</span></span><span class="l ">  <span class="a">gap</span><span class="p">:</span> <span class="s">20px</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div>
+    <div class="card" style="padding:18px 26px"><p style="font-size:21px;line-height:1.4;color:var(--ink)">Add <span class="kb">display: flex</span> to the <b>parent</b>. Its children line up in a row. <span class="kb">gap</span> adds space between them.</p></div>
+  </div>
+  <div class="ba" style="margin-top:22px">
+    <div><p class="lab">Without flex: stacked</p><div class="mini" style="height:200px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody dm col"><div class="bx">Bread</div><div class="bx">Cakes</div><div class="bx">Snacks</div></div></div></div>
+    <div><p class="lab">With display: flex</p><div class="mini" style="height:200px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody dm row"><div class="bx">Bread</div><div class="bx">Cakes</div><div class="bx">Snacks</div></div></div></div>
+  </div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Flexbox is applied to the parent (the container); it then arranges the children. The most common mistake is putting display: flex on the children instead of the parent.</p><p>Show it live: start with three stacked divs, add display: flex to their parent and watch them jump into a row. Then add gap.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>By default, boxes stack on top of each other, like plates in a pile. Flexbox lets us put them side by side. It works like this: you give the parent, the container, display flex. The children inside it then line up in a row. Add gap to put space between them.</p><p>Remember: flex goes on the parent, not on the children. It's like telling a teacher to line up the whole class, not telling each student.</p><p class="ck"><b>Check:</b> On which element do you put display: flex?</p></div></div>
+</section>
+
+<section class="slide" aria-label="Flexbox alignment">
+  <div class="crumb"><span class="pill">Part 4</span><span class="time">Flexbox layout</span></div>
+
+  <h2 class="title">Control the spacing and alignment</h2>
+  <div class="fxg"><div class="fp"><p>justify-content: flex-start</p><div class="fx" style="justify-content:flex-start"><i></i><i></i><i></i></div></div><div class="fp"><p>justify-content: center</p><div class="fx" style="justify-content:center"><i></i><i></i><i></i></div></div><div class="fp"><p>justify-content: space-between</p><div class="fx" style="justify-content:space-between"><i></i><i></i><i></i></div></div><div class="fp"><p>align-items: flex-start</p><div class="fx" style="align-items:flex-start"><i style="height:28px"></i><i style="height:62px"></i><i style="height:40px"></i></div></div><div class="fp"><p>align-items: center</p><div class="fx" style="align-items:center"><i style="height:28px"></i><i style="height:62px"></i><i style="height:40px"></i></div></div><div class="fp"><p>align-items: flex-end</p><div class="fx" style="align-items:flex-end"><i style="height:28px"></i><i style="height:62px"></i><i style="height:40px"></i></div></div></div>
+  <div class="chips mt"><span class="chip"><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">justify-content</code> spreads items along the row</span><span class="chip"><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">align-items</code> lines them up across the row</span></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Two directions: justify-content works along the main axis (the row), and align-items works across it. Have learners try each value on their own page.</p><p>space-between puts the first item at the start and the last at the end, with equal gaps between: perfect for a logo and menu in a header.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Once boxes are in a row, you can control how they are spread. Justify-content works along the row. Flex-start pushes them to the left, center puts them in the middle, and space-between pushes the first to the left and the last to the right, with equal space between.</p><p>Align-items works across the row, from top to bottom. It decides whether boxes line up at the top, in the middle, or at the bottom.</p><p class="ck"><b>Check:</b> Which value would you use to put a logo on the far left and a menu on the far right?</p></div></div>
+</section>
+
+<section class="slide" aria-label="Navigation bar">
+  <div class="crumb"><span class="pill">Part 4</span><span class="time">Flexbox layout</span></div>
+
+  <h2 class="title">A navigation bar with flexbox</h2>
+  <div class="cr" style="grid-template-columns:1fr 56px 1.1fr">
+    <div style="display:flex;flex-direction:column;gap:14px"><div class="code sml" style="font-size:16px"><span class="l "><span class="p">&lt;</span><span class="t">header</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">h1</span><span class="p">&gt;</span>Sweet Bites<span class="p">&lt;/</span><span class="t">h1</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"#"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"#"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;/</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">header</span><span class="p">&gt;</span></span></div><div class="code sml" style="font-size:16px"><span class="l "><span class="t">header</span> <span class="p">{</span></span><span class="l ">  <span class="a">display</span><span class="p">:</span> <span class="s">flex</span><span class="p">;</span></span><span class="l ">  <span class="a">justify-content</span><span class="p">:</span> <span class="s">space-between</span><span class="p">;</span></span><span class="l ">  <span class="a">align-items</span><span class="p">:</span> <span class="s">center</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div></div><div class="mid"><svg class="ico" style="width:32px;height:32px"><use href="#i-arrow"/></svg></div><div class="mini" style="height:200px;padding:0"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody plain"><div class="site" style="border-radius:0"><header><h1>Sweet Bites</h1><nav><a href="#">Home</a><a href="#">About</a></nav></header></div><div class="dm" style="height:90px"></div></div></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>This is the pattern behind most website headers: the header is a flex container, space-between pushes the logo and nav apart, and align-items: center lines them up vertically.</p><p>The dark bar and colours come from extra CSS you'll add in the exercise.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here's a real-world use. The header is the flex container. It has two children: the title and the nav. Space-between pushes the title to the left and the nav to the right. And align-items center lines them up in the middle, top to bottom. That's how most websites build their top bar.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Radius and shadow">
+  <div class="crumb"><span class="pill">Part 5</span><span class="time">Polish</span></div>
+
+  <h2 class="title">Soft corners and shadows</h2>
+  <div class="ba">
+    <div><p class="lab">Plain box</p><div class="mini" style="height:190px;padding:0"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody dm"><div style="background:#fff;padding:22px;font:600 17px Arial,sans-serif;border:1px solid #ccc">Fresh bread<br><span style="font:400 14px Arial,sans-serif">Baked every morning.</span></div></div></div></div>
+    <div><p class="lab">With radius and shadow</p><div class="mini" style="height:190px;padding:0"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody dm"><div style="background:#fff;padding:22px;font:600 17px Arial,sans-serif;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.12)">Fresh bread<br><span style="font:400 14px Arial,sans-serif">Baked every morning.</span></div></div></div></div>
+  </div>
+  <div class="code sml" style="font-size:18px;margin-top:22px;display:inline-block;padding:16px 28px"><span class="l "><span class="t">.card</span> <span class="p">{</span></span><span class="l ">  <span class="a">border-radius</span><span class="p">:</span> <span class="s">16px</span><span class="p">;</span></span><span class="l ">  <span class="a">box-shadow</span><span class="p">:</span> <span class="s">0 8px 20px rgba(0, 0, 0, 0.1)</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>border-radius rounds the corners; a bigger number gives rounder corners. box-shadow takes horizontal offset, vertical offset, blur and colour. rgba(0, 0, 0, 0.1) is black at 10% opacity: a soft shadow.</p><p>Let learners experiment: radius 0 vs 30px, shadow blur 5px vs 40px.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Two small properties can make a page look much more professional. Border-radius rounds the corners: a bigger number means rounder. Box-shadow adds a soft shadow under a box, so it seems to lift off the page. The numbers are: how far across, how far down, how blurry, and the colour. The colour here is black, but only ten percent strong, so the shadow is soft.</p><p>Try changing the numbers and see what you like.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Hover effects">
+  <div class="crumb"><span class="pill">Part 5</span><span class="time">Polish</span></div>
+
+  <h2 class="title">Hover effects</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:16px;align-items:start"><div class="code sml" style="font-size:17px"><span class="l "><span class="t">.card</span> <span class="p">{</span></span><span class="l ">  <span class="a">transition</span><span class="p">:</span> <span class="s">transform 0.2s</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">.card:hover</span> <span class="p">{</span></span><span class="l ">  <span class="a">transform</span><span class="p">:</span> <span class="s">translateY(-6px)</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">nav a:hover</span> <span class="p">{</span></span><span class="l ">  <span class="a">color</span><span class="p">:</span> <span class="s">#d6e86a</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div>
+    <div>
+      <div class="ba" style="margin-top:0;gap:18px">
+        <div><p class="lab">Normal</p><div class="mini" style="height:150px"><div class="mbody dm" style="padding:14px 16px;height:96px"><div class="bx" style="margin-top:12px">Bread</div></div></div></div>
+        <div><p class="lab">On hover</p><div class="mini" style="height:150px"><div class="mbody dm" style="padding:14px 16px;height:96px"><div class="bx" style="margin-top:4px;box-shadow:0 12px 20px rgba(0,0,0,.18)">Bread</div></div></div></div>
+      </div>
+      <div class="card lime" style="margin-top:16px;padding:16px 22px"><p style="font-size:19px;line-height:1.35">Hover on a card or link, and it lifts or changes colour. <span class="kb">:hover</span> only applies while the mouse is over it.</p></div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Ports are often the hardest part for beginners. Hold up a flash drive and a charger, and let learners find the matching port on a real laptop.</p><p>Port positions differ between laptops. The side view in the picture is a simplified illustration, so always show the real machine.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>A laptop puts the screen, keyboard and system unit in one body. The touchpad does the job of a mouse. The webcam records video and takes pictures, and the speakers make sound.</p><p>Then there are the ports, the sockets on the side. USB is for flash drives, keyboards and phones. HDMI connects to a bigger screen, a TV or a projector. The audio port is for headphones or a microphone. The power port is where the charger goes.</p><p class="ck"><b>Check:</b> Here's a flash drive. Which port does it go into?</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>The :hover part is called a pseudo-class. It applies a rule only while the mouse is over the element. transition makes the change smooth instead of instant. On phones, there is no hover, so don't rely on it for essential information.</p><p>Have learners hover over their own page's cards and links to test.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Websites feel alive when they react to your mouse. The colon hover part means 'when the mouse is over it'. Here, when you hover over a card it lifts up by six pixels, and when you hover over a nav link it changes colour. The transition line makes the movement smooth rather than a sudden jump.</p><p>It's a small touch that makes a site feel professional. Test it by moving your mouse over your cards.</p></div></div>
 </section>
 
-<section class="slide" aria-label="Hardware and software">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">Hardware and software</span></div>
+<section class="slide" aria-label="Phone friendly">
+  <div class="crumb"><span class="pill">Part 5</span><span class="time">Polish</span></div>
 
-  <h2 class="title">Hardware and software</h2>
-  <div class="grid hs">
-    <div class="card"><h3>Hardware</h3><p style="margin-bottom:14px">The physical parts you can touch.</p>
-      <div class="chips"><span class="chip">Keyboard</span><span class="chip">Mouse</span><span class="chip">Monitor</span><span class="chip">Laptop</span><span class="chip">Hard drive</span><span class="chip">Flash drive</span></div></div>
-    <div class="card"><h3>Software</h3><p style="margin-bottom:14px">Programs and applications that run on a computer.</p>
-      <div class="chips"><span class="chip">Google Chrome</span><span class="chip">Microsoft Word</span><span class="chip">Calculator</span><span class="chip">WhatsApp</span><span class="chip">Paint</span><span class="chip">Media players</span></div></div>
-  </div>
-  <div class="card lime strip"><svg class="ico" style="width:34px;height:34px"><use href="#i-bulb"/></svg><p>Hardware is the physical machine. Software gives the machine instructions about what to do.</p></div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Introduce this very simply. Learners at this level only need the basic idea.</p><p>Point at things and ask learners to classify them. Include a few that are slightly tricky, such as WhatsApp (software) and a flash drive (hardware).</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here's the simplest way to think about it. Hardware is anything you can touch: keyboard, mouse, monitor, flash drive. Software is the programs inside that tell the machine what to do: Chrome, Word, Calculator, WhatsApp.</p><p>Think of cooking. The pot and the stove are hardware. The recipe is software, because it tells you what to do with them.</p><p class="ck"><b>Check:</b> Is WhatsApp hardware or software? What about a flash drive?</p></div></div>
-</section>
-
-<section class="slide" aria-label="The desktop">
-  <div class="crumb"><span class="pill">Session 1</span><span class="time">The desktop</span></div>
-
-  <h2 class="title">The computer desktop</h2>
-  <div class="dsplit"><svg class="dg" viewBox="0 0 640 400" style="height:370px;width:auto" role="img" aria-label="A computer desktop with icons, a window and a taskbar">
-<rect class="fl" x="4" y="4" width="632" height="392" rx="20"/>
-<rect class="scr" x="20" y="20" width="600" height="316" rx="10"/>
-<path class="fl" d="M42 56h18l6 6h24a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H42a4 4 0 0 1-4-4V60a4 4 0 0 1 4-4z"/>
-<text class="lbl" x="68" y="112">Folder</text>
-<path class="fl" d="M134 46h24l14 14v36a3 3 0 0 1-3 3h-35a3 3 0 0 1-3-3V49a3 3 0 0 1 3-3z"/><path class="ln" d="M158 46v14h14"/>
-<text class="lbl" x="152" y="112">File</text>
-<rect class="fl" x="212" y="46" width="52" height="52" rx="13"/><path class="ln" d="M226 62h24M226 72h24M226 82h12"/>
-<text class="lbl" x="238" y="112">App</text>
-<rect class="fl" x="290" y="130" width="310" height="186" rx="10"/><path class="ln" d="M290 162h310"/>
-<text class="lbl" x="312" y="146" style="text-anchor:start">Notes</text>
-<path class="ln" d="M540 146h12"/><rect class="ln" x="562" y="140" width="12" height="12" rx="2"/><path class="ln" d="M584 140l12 12M596 140l-12 12"/>
-<path class="soft" d="M312 188h200M312 208h240M312 228h160"/>
-<rect class="fl" x="20" y="344" width="600" height="40" rx="10"/>
-<rect class="mk" x="30" y="350" width="28" height="28" rx="8"/>
-<rect class="scr" x="72" y="352" width="24" height="24" rx="6"/><rect class="scr" x="104" y="352" width="24" height="24" rx="6"/>
-<path class="ln" d="M470 372v-4M478 372v-9M486 372v-14"/>
-<rect class="ln" x="508" y="357" width="26" height="14" rx="3"/><path class="ln" d="M538 361v6"/>
-<text class="lbl" x="606" y="364" style="text-anchor:end">10:42</text>
-<g><circle class="mk" cx="282" cy="46" r="14"/><text x="282" y="47">1</text></g><g><circle class="mk" cx="114" cy="52" r="14"/><text x="114" y="53">2</text></g><g><circle class="mk" cx="300" cy="364" r="14"/><text x="300" y="365">3</text></g><g><circle class="mk" cx="44" cy="330" r="14"/><text x="44" y="331">4</text></g><g><circle class="mk" cx="584" cy="330" r="14"/><text x="584" y="331">5</text></g><g><circle class="mk" cx="500" cy="330" r="14"/><text x="500" y="331">6</text></g><g><circle class="mk" cx="556" cy="282" r="14"/><text x="556" y="283">7</text></g></svg>
-    <div class="legend c">
-      <div class="lg"><span class="no">1</span><div><b>Icons</b><span>Pictures that stand for apps, files and folders.</span></div></div>
-      <div class="lg"><span class="no">2</span><div><b>Folders and files</b><span>Where your information is kept.</span></div></div>
-      <div class="lg"><span class="no">3</span><div><b>Taskbar or dock</b><span>Shows open apps and shortcuts.</span></div></div>
-      <div class="lg"><span class="no">4</span><div><b>Start menu or launcher</b><span>Where you find and open apps.</span></div></div>
-      <div class="lg"><span class="no">5</span><div><b>Clock</b><span>Shows the time.</span></div></div>
-      <div class="lg"><span class="no">6</span><div><b>Network and battery</b><span>Show your connection and charge.</span></div></div>
-      <div class="lg"><span class="no">7</span><div><b>Application window</b><span>Where an open app appears.</span></div></div>
+  <h2 class="title">Make it phone-friendly</h2>
+  <div style="display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;margin-top:8px"><div class="phone"><div class="ps"><div class="ph1">Sweet Bites</div><div class="pc"><b>Bread</b>Soft and warm.</div><div class="pc"><b>Cakes</b>For every party.</div><div class="pc"><b>Snacks</b>Perfect with tea.</div></div></div>
+    <div class="tips">
+      <div class="card"><h3>1. Add the viewport line</h3><div class="code sml" style="font-size:12.5px;padding:10px 14px;margin-top:8px;white-space:pre-wrap"><span class="l "><span class="p">&lt;</span><span class="t">meta</span> <span class="a">name</span><span class="p">=</span><span class="s">"viewport"</span> <span class="a">content</span><span class="p">=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="p">&gt;</span></span></div><p>In the head. It tells phones to use the real screen width.</p></div>
+      <div class="card"><h3>2. Let the cards wrap</h3><p>Add <code style="font-family:'JetBrains Mono',monospace;font-size:.9em">flex-wrap: wrap;</code> to your flex container. Cards drop to the next row when there is no room.</p></div>
+      <div class="card"><h3>3. Fit your images</h3><p><code style="font-family:'JetBrains Mono',monospace;font-size:.9em">img { max-width: 100%; }</code> stops pictures from being wider than the screen.</p></div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>After a computer starts, the main working area on the screen is the desktop. Familiarity is the goal today. Don't introduce advanced concepts in the first lesson.</p><p>Names differ between systems: taskbar (Windows) or dock (Mac), Start menu or application launcher. Name each feature and point to it on your own screen.</p><p>The picture is a simplified illustration. Always show the real desktop on your projector.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>When the computer has finished starting, you see the desktop. Think of the top of a real desk: it's where your things are laid out.</p><p>You'll see icons, folders and files. A bar along the bottom, called the taskbar or dock. The Start menu or launcher, where you find apps. The clock. Small signs for the network and the battery. And windows, when an app is open.</p><p>Today we only want you to recognise these. We'll use them properly in a moment.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Many people open websites on phones, so it is worth making this a habit from the start. Today is only a first step: full responsive design (media queries) comes later.</p><p>To test: make the browser window narrow, or use the device toolbar in the browser developer tools (right-click, Inspect). The cards in the exercise use flex: 1 1 200px, which means each card wants to be at least 200px wide and wraps to a new row when there isn't enough room.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Many people will open your website on a phone, so we should make sure it works on small screens. Three easy first steps. One: add this viewport line in the head, so phones use their real width. Two: add flex-wrap wrap to your flex container, so cards drop onto the next row when there's no space, like in the phone picture. Three: give images a max-width of one hundred percent, so no picture is wider than the screen.</p><p>There's more to learn about this later, but these three habits already help a lot.</p><p class="ck"><b>Check:</b> What does flex-wrap: wrap do on a small screen?</p></div></div>
 </section>
 
-<section class="slide" aria-label="Practical 1">
-  <div class="crumb"><span class="pill">Practical 1</span><span class="time">Identify the parts</span></div>
+<section class="slide" aria-label="Exercise target">
+  <div class="crumb"><span class="pill">Exercise</span><span class="time">Your mini website</span></div>
 
-  <h2 class="title">Practical: identify the parts</h2>
-  <div class="good2">
-    <div class="card chkc"><div class="chk">
-      <div>Monitor</div><div>Keyboard</div><div>Mouse</div><div>USB port</div><div>Charging port</div><div>Desktop</div><div>Power button</div>
-    </div></div>
-    <div class="card lime" style="padding:30px 32px;display:flex;flex-direction:column;gap:16px">
-      <svg class="ico" style="width:34px;height:34px"><use href="#i-search"/></svg>
-      <p style="font:500 28px/1.3 'Outfit',sans-serif">Then I'll point at things and ask:</p>
-      <p class="quote">What is this?</p>
-      <p class="quote">What does it do?</p>
+  <h2 class="title">Exercise: build your mini website</h2>
+  <div class="grid" style="grid-template-columns:1.25fr 1fr;gap:30px;margin-top:16px;align-items:start">
+    <div class="mini" style="height:392px"><div class="mb"><i></i><i></i><i></i><span class="url">index.html</span></div><div class="mbody site"><header><h1>Sweet Bites</h1><nav><a href="#">Home</a><a href="#">About</a></nav></header><div class="hero"><h2>Fresh bread every morning</h2><p>Baked in Your Town with love.</p></div><div class="cards"><div class="card"><h3>Bread</h3><p>Soft, warm.</p></div><div class="card"><h3>Cakes</h3><p>For parties.</p></div><div class="card"><h3>Snacks</h3><p>With tea.</p></div></div><footer>Open every day</footer></div></div>
+    <div class="req">
+      <h3>Your site needs</h3>
+      <div class="rr"><svg class="ico"><use href="#i-check"/></svg>A header with a name and a nav</div>
+      <div class="rr"><svg class="ico"><use href="#i-check"/></svg>A hero section with a heading and a line of text</div>
+      <div class="rr"><svg class="ico"><use href="#i-check"/></svg>Three cards side by side</div>
+      <div class="rr"><svg class="ico"><use href="#i-check"/></svg>A footer</div>
+      <div class="rr"><svg class="ico"><use href="#i-link"/></svg>A second page, linked from the nav</div>
+      <div class="rr"><svg class="ico"><use href="#i-palette"/></svg>Your own name, words and colours</div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Place learners around the available computers. Ask each learner to identify the monitor, keyboard, mouse, USB port, charging port, desktop and power button.</p><p>Then point at components at random and ask: What is this? What does it do? This practical supports the syllabus requirement to identify parts of a computer.</p><p>Make sure quieter learners get a turn, and let others help only after the learner has tried.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Now it's your turn. Come to the computers. Find the monitor, the keyboard, the mouse, a USB port, the charging port, the desktop and the power button.</p><p>When you've found them, I'll point at things and ask: what is this? What does it do? Don't worry if you're unsure. Guessing is part of learning.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>The example is a fictional bakery. Encourage learners to choose their own subject: a real or imagined small business, a club, or themselves. Personal choices keep them motivated.</p><p>Show the finished result first. Stress that colours, words and card topics should be their own.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Now it's your turn to build something real. Here's the target: a small business website with a dark header, a nav, a hero section, three cards in a row, and a footer. Plus a second page linked from the nav.</p><p>I'm using a bakery as an example. You can choose anything: your own small business, a school club, a football team, or a page about yourself. Make it yours.</p></div></div>
 </section>
 
-<section class="slide" aria-label="Quick check">
-  <div class="crumb"><span class="pill">Practical 1</span><span class="time">Quick check</span></div>
+<section class="slide" aria-label="Exercise steps">
+  <div class="crumb"><span class="pill">Exercise</span><span class="time">Your mini website</span></div>
+
+  <h2 class="title">Exercise steps</h2>
+  <div class="sidec">
+    <div class="stp">
+      <div class="sr card"><span class="no">1</span><span class="t">Create a folder <b>web-day2</b> with <b>index.html</b> and <b>style.css</b></span></div>
+      <div class="sr card"><span class="no">2</span><span class="t">Type the HTML in <b>index.html</b>. Save and look</span></div>
+      <div class="sr card"><span class="no">3</span><span class="t">Add the CSS for the body, header and nav</span></div>
+      <div class="sr card"><span class="no">4</span><span class="t">Add the CSS for the hero, cards and footer</span></div>
+      <div class="sr card"><span class="no">5</span><span class="t">Copy <b>index.html</b> to <b>about.html</b> and change the main text</span></div>
+      <div class="sr card"><span class="no">6</span><span class="t">Test the links and narrow the browser window</span></div>
+    </div>
+    <div class="card lime"><svg class="ico"><use href="#i-plus"/></svg><p>Finished early?</p><p class="sm">Add a hover effect on the cards.</p><p class="sm">Change the colours to match your brand.</p><p class="sm">Add a picture with max-width: 100%.</p></div>
+  </div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Set clear checkpoints: after step 2 everyone sees an unstyled page; after step 4 a styled one; after step 6 two linked pages. Walk the room and look at screens.</p><p>To make about.html, learners can copy index.html in the VS Code Explorer (right-click, Copy, then Paste) and rename the copy, then edit the main content.</p><p>Common issues: display: flex on the wrong element, a missing dot in a class selector, file names that don't match, and a link line outside the head. Use slide 28.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here are the steps. Create a new folder for today, web-day2, with index.html and style.css. Type the HTML first and check it in the browser. Then add the CSS in two stages, so you can see the progress. Then make your second page by copying the first and changing the main text. Finally test the links and make the window narrow to see your cards wrap.</p><p>Take your time, and ask if you're stuck. If you finish early, try the extras.</p><p class="ck"><b>Check:</b> What do you do first if your cards aren't side by side?</p></div></div>
+</section>
+
+<section class="slide" aria-label="index.html">
+  <div class="crumb"><span class="pill">Exercise</span><span class="time">The code</span></div>
+
+  <h2 class="title">index.html</h2>
+  <div class="grid" style="grid-template-columns:1fr 1.2fr;gap:20px;margin-top:14px;align-items:start"><div class="code sml" style="font-size:13.5px;line-height:1.5;padding:14px 18px"><span class="l "><span class="t">&lt;!DOCTYPE html&gt;</span></span><span class="l "><span class="p">&lt;</span><span class="t">html</span> <span class="a">lang</span><span class="p">=</span><span class="s">"en"</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;</span><span class="t">head</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">meta</span> <span class="a">charset</span><span class="p">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span></span><span class="l ">  &lt;meta name="viewport"</span><span class="l ">    content="width=device-width, initial-scale=1"&gt;</span><span class="l ">  <span class="p">&lt;</span><span class="t">title</span><span class="p">&gt;</span>Sweet Bites<span class="p">&lt;/</span><span class="t">title</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">link</span> <span class="a">rel</span><span class="p">=</span><span class="s">"stylesheet"</span> <span class="a">href</span><span class="p">=</span><span class="s">"style.css"</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">head</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;</span><span class="t">body</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">header</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">h1</span><span class="p">&gt;</span>Sweet Bites<span class="p">&lt;/</span><span class="t">h1</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">a</span> <span class="a">href</span><span class="p">=</span><span class="s">"about.html"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="t">a</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;/</span><span class="t">nav</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;/</span><span class="t">header</span><span class="p">&gt;</span></span></div><div class="code sml" style="font-size:13.5px;line-height:1.5;padding:14px 18px"><span class="l ">  <span class="p">&lt;</span><span class="t">main</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">section</span> <span class="a">class</span><span class="p">=</span><span class="s">"hero"</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">h2</span><span class="p">&gt;</span>Fresh bread every morning<span class="p">&lt;/</span><span class="t">h2</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>Baked in Your Town with love.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;/</span><span class="t">section</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">section</span> <span class="a">class</span><span class="p">=</span><span class="s">"cards"</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">div</span> <span class="a">class</span><span class="p">=</span><span class="s">"card"</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="t">h3</span><span class="p">&gt;</span>Bread<span class="p">&lt;/</span><span class="t">h3</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>Soft, warm.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span><span class="p">&lt;/</span><span class="t">div</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">div</span> <span class="a">class</span><span class="p">=</span><span class="s">"card"</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="t">h3</span><span class="p">&gt;</span>Cakes<span class="p">&lt;/</span><span class="t">h3</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>For parties.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span><span class="p">&lt;/</span><span class="t">div</span><span class="p">&gt;</span></span><span class="l ">      <span class="p">&lt;</span><span class="t">div</span> <span class="a">class</span><span class="p">=</span><span class="s">"card"</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="t">h3</span><span class="p">&gt;</span>Snacks<span class="p">&lt;/</span><span class="t">h3</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>With tea.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span><span class="p">&lt;/</span><span class="t">div</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;/</span><span class="t">section</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;/</span><span class="t">main</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;</span><span class="t">footer</span><span class="p">&gt;</span></span><span class="l ">    <span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>Open every day<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;/</span><span class="t">footer</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">body</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">html</span><span class="p">&gt;</span></span></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>The code is split in two: the left card is the top of the file, the right card continues from there. Learners should type it, replacing Sweet Bites and the words with their own.</p><p>The classes hero, cards and card are what the CSS targets, so those names must match exactly. Spelling and the dot are the usual stumbling blocks.</p><p>Share this slide as a handout if learners cannot see the screen well.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here is the HTML. The left card is the top of the file, and the right card carries on underneath. Notice the structure from earlier: a header with a nav, then a main with two sections, then a footer. The hero section holds the big message. The cards section holds three divs, each with the class card.</p><p>Type it yourself and replace the bakery words with your own. Keep the class names exactly the same, because the CSS will use them.</p></div></div>
+</section>
+
+<section class="slide" aria-label="style.css 1">
+  <div class="crumb"><span class="pill">Exercise</span><span class="time">The code</span></div>
+
+  <h2 class="title">style.css (part 1)</h2>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;align-items:start"><div class="code sml" style="font-size:16px;line-height:1.5;padding:16px 20px"><span class="l "><span class="t">body</span> <span class="p">{</span></span><span class="l ">  <span class="a">font-family</span><span class="p">:</span> <span class="s">Arial, sans-serif</span><span class="p">;</span></span><span class="l ">  <span class="a">margin</span><span class="p">:</span> <span class="s">0</span><span class="p">;</span></span><span class="l ">  <span class="a">background-color</span><span class="p">:</span> <span class="s">#f4f1ea</span><span class="p">;</span></span><span class="l ">  <span class="a">color</span><span class="p">:</span> <span class="s">#27251f</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">header</span> <span class="p">{</span></span><span class="l ">  <span class="a">display</span><span class="p">:</span> <span class="s">flex</span><span class="p">;</span></span><span class="l ">  <span class="a">justify-content</span><span class="p">:</span> <span class="s">space-between</span><span class="p">;</span></span><span class="l ">  <span class="a">align-items</span><span class="p">:</span> <span class="s">center</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">16px 32px</span><span class="p">;</span></span><span class="l ">  <span class="a">background-color</span><span class="p">:</span> <span class="s">#27251f</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div><div class="code sml" style="font-size:16px;line-height:1.5;padding:16px 20px"><span class="l "><span class="t">header h1</span> <span class="p">{</span></span><span class="l ">  <span class="a">margin</span><span class="p">:</span> <span class="s">0</span><span class="p">;</span></span><span class="l ">  <span class="a">color</span><span class="p">:</span> <span class="s">#d6e86a</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">nav a</span> <span class="p">{</span></span><span class="l ">  <span class="a">color</span><span class="p">:</span> <span class="s">white</span><span class="p">;</span></span><span class="l ">  <span class="a">margin-left</span><span class="p">:</span> <span class="s">20px</span><span class="p">;</span></span><span class="l ">  <span class="a">text-decoration</span><span class="p">:</span> <span class="s">none</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">nav a:hover</span> <span class="p">{</span></span><span class="l ">  <span class="a">color</span><span class="p">:</span> <span class="s">#d6e86a</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Learners type this part first and check the dark header with the nav on the right before continuing. margin: 0 on the body removes the default white border around the page.</p><p>text-decoration: none removes the underline on the nav links. Nav a means only links inside the nav, so other links aren't affected.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Start with this part of the CSS. The body rule sets the font, the background and the text colour for the whole page, and removes the default margin. The header rule is the flexbox from earlier: space-between and centre alignment, with some padding and a dark background. Then the title colour, and the nav links: white, with space between, no underline, and lime when you hover. Save and check your header before going on.</p></div></div>
+</section>
+
+<section class="slide" aria-label="style.css 2">
+  <div class="crumb"><span class="pill">Exercise</span><span class="time">The code</span></div>
+
+  <h2 class="title">style.css (part 2)</h2>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;align-items:start"><div class="code sml" style="font-size:16px;line-height:1.5;padding:16px 20px"><span class="l "><span class="t">.hero</span> <span class="p">{</span></span><span class="l ">  <span class="a">text-align</span><span class="p">:</span> <span class="s">center</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">60px 20px</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">.cards</span> <span class="p">{</span></span><span class="l ">  <span class="a">display</span><span class="p">:</span> <span class="s">flex</span><span class="p">;</span></span><span class="l ">  <span class="a">flex-wrap</span><span class="p">:</span> <span class="s">wrap</span><span class="p">;</span></span><span class="l ">  <span class="a">gap</span><span class="p">:</span> <span class="s">20px</span><span class="p">;</span></span><span class="l ">  <span class="a">max-width</span><span class="p">:</span> <span class="s">900px</span><span class="p">;</span></span><span class="l ">  <span class="a">margin</span><span class="p">:</span> <span class="s">0 auto</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">0 20px</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div><div class="code sml" style="font-size:16px;line-height:1.5;padding:16px 20px"><span class="l "><span class="t">.card</span> <span class="p">{</span></span><span class="l ">  <span class="a">flex</span><span class="p">:</span> <span class="s">1 1 200px</span><span class="p">;</span></span><span class="l ">  <span class="a">background-color</span><span class="p">:</span> <span class="s">white</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">20px</span><span class="p">;</span></span><span class="l ">  <span class="a">border-radius</span><span class="p">:</span> <span class="s">16px</span><span class="p">;</span></span><span class="l ">  <span class="a">box-shadow</span><span class="p">:</span> <span class="s">0 8px 20px rgba(0, 0, 0, 0.1)</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span><span class="l ">&#8203;</span><span class="l "><span class="t">footer</span> <span class="p">{</span></span><span class="l ">  <span class="a">text-align</span><span class="p">:</span> <span class="s">center</span><span class="p">;</span></span><span class="l ">  <span class="a">padding</span><span class="p">:</span> <span class="s">30px</span><span class="p">;</span></span><span class="l "><span class="p">}</span></span></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>The .cards rule combines flexbox, wrap, a centred max-width container and padding. flex: 1 1 200px means each card can grow, can shrink, and starts from a 200px width, so the row wraps naturally on small screens.</p><p>Check that the dot is present on .hero, .cards and .card. A missing dot is the most common reason a style doesn't apply.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Now the second half. The hero rule centres the text and gives it lots of padding. The cards rule is a flexbox: it lets the cards wrap onto the next row, adds a gap, limits the width to 900 pixels and centres it with margin zero auto. The card rule styles each card: white background, padding, rounded corners and a soft shadow. And flex one one two hundred pixels simply means each card likes to be at least two hundred pixels wide, and wraps when there's no space.</p><p>Finally, a simple footer. Save, refresh, and enjoy your site!</p></div></div>
+</section>
+
+<section class="slide" aria-label="Second page">
+  <div class="crumb"><span class="pill">Exercise</span><span class="time">The second page</span></div>
+
+  <h2 class="title">Make about.html</h2>
+  <div class="sidec">
+    <div class="stp">
+      <div class="sr card"><span class="no">1</span><span class="t">Copy <b>index.html</b> and paste it in the same folder</span></div>
+      <div class="sr card"><span class="no">2</span><span class="t">Rename the copy to <b>about.html</b></span></div>
+      <div class="sr card"><span class="no">3</span><span class="t">Replace the content inside <b>main</b> with your own text</span></div>
+      <div class="sr card"><span class="no">4</span><span class="t">Click Home and About to test the links</span></div>
+    </div>
+    <div><div class="code sml" style="font-size:15px"><span class="l "><span class="p">&lt;</span><span class="t">main</span><span class="p">&gt;</span></span><span class="l hi">  <span class="p">&lt;</span><span class="t">section</span> <span class="a">class</span><span class="p">=</span><span class="s">"hero"</span><span class="p">&gt;</span></span><span class="l hi">    <span class="p">&lt;</span><span class="t">h2</span><span class="p">&gt;</span>About us<span class="p">&lt;/</span><span class="t">h2</span><span class="p">&gt;</span></span><span class="l hi">    <span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>We are a small family bakery.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span></span><span class="l hi">    <span class="p">&lt;</span><span class="t">p</span><span class="p">&gt;</span>Come and visit us in Your Town.<span class="p">&lt;/</span><span class="t">p</span><span class="p">&gt;</span></span><span class="l ">  <span class="p">&lt;/</span><span class="t">section</span><span class="p">&gt;</span></span><span class="l "><span class="p">&lt;/</span><span class="t">main</span><span class="p">&gt;</span></span></div>
+      <p class="sm" style="margin-top:12px">Only the main part changes. The header, nav, footer and CSS stay the same.</p>
+    </div>
+  </div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Copying and editing is how many real websites are made. The shared header, nav and footer stay identical, and style.css is shared, so both pages match automatically.</p><p>Watch for learners who edit the wrong file or forget to rename the copy (e.g. 'index copy.html').</p></div><div class="n-say"><h3>How to explain it to students</h3><p>For your second page, the easiest way is to copy your first. Copy index.html, paste it in the same folder, and rename the copy to about.html. Then change only the content inside main: a heading and a couple of sentences about you or your business. The header, nav, footer and the CSS all stay the same, so the pages match automatically.</p><p>Finally, click Home and About to check your links work.</p></div></div>
+</section>
+
+<section class="slide" aria-label="Common mistakes">
+  <div class="crumb"><span class="pill">Wrap-up</span><span class="time">Fixing problems</span></div>
+
+  <h2 class="title">When something doesn't work</h2>
+  <div class="trh"><span>What you see</span><span></span><span>Check this</span></div>
+  <div class="traps">
+    <div class="trap card"><span class="s">The cards won't sit side by side</span><svg class="ico arr"><use href="#i-arrow"/></svg><span class="k">Is display: flex on the parent (.cards)?</span></div>
+    <div class="trap card"><span class="s">A class style doesn't apply</span><svg class="ico arr"><use href="#i-arrow"/></svg><span class="k">Dot in the CSS (.card). No dot in the HTML</span></div>
+    <div class="trap card"><span class="s">A nav link opens "not found"</span><svg class="ico arr"><use href="#i-arrow"/></svg><span class="k">Does href match the file name? Same folder?</span></div>
+    <div class="trap card"><span class="s">The spacing looks wrong</span><svg class="ico arr"><use href="#i-arrow"/></svg><span class="k">Padding is inside the box. Margin is outside</span></div>
+    <div class="trap card"><span class="s">Nothing changes at all</span><svg class="ico arr"><use href="#i-arrow"/></svg><span class="k">Saved? Refreshed? Is the CSS link in the head?</span></div>
+  </div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Keep reminding learners of a calm routine: read slowly, compare with the example, then ask. Most Day 2 problems are small: a missing dot, a misplaced flex, or a file name that doesn't match.</p><p>Teach them to use the browser's Inspect tool to see which CSS rules are applied: right-click an element and choose Inspect.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here are the five most common problems today. Cards not side by side? Check display flex is on the parent. A class style not working? Check the dot in the CSS, and no dot in the HTML. A link that says not found? Check the file name. Spacing wrong? Remember padding is inside, margin is outside. And if nothing changes at all, check you saved, refreshed, and linked your CSS.</p><p>Don't panic when it breaks. Read slowly, and fix one thing at a time.</p><p class="ck"><b>Check:</b> Your class style isn't working. What is the first thing you look for?</p></div></div>
+</section>
+
+<section class="slide" aria-label="Quick check quiz">
+  <div class="crumb"><span class="pill">Wrap-up</span><span class="time">Quick check</span></div>
 
   <h2 class="title">Quick check</h2>
-  <div class="qa"><details class="qd"><summary><span>What is digital literacy?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">The ability to use digital technology correctly and effectively.</p></details><details class="qd"><summary><span>Name three digital devices.</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">For example: smartphone, laptop, tablet.</p></details><details class="qd"><summary><span>What device do we normally use for typing?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">The keyboard.</p></details><details class="qd"><summary><span>What device helps us point and click?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">The mouse.</p></details><details class="qd"><summary><span>What is the difference between hardware and software?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">Hardware can be touched. Software is the programs running on the device.</p></details></div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Click a question to reveal the expected answer only after learners have tried. Ask different learners each time.</p><p>Praise good attempts and note anything that was shaky, so you can revisit it at the start of Session 2.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Let's see what stayed with you. I'll ask a question, you answer, and then we check together.</p><p>Don't worry about getting it perfectly. Saying it in your own words is what matters.</p></div></div>
+  <div class="qa"><details class="qd"><summary><span>What is the box model?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">Every element is a box made of content, padding, border and margin.</p></details><details class="qd"><summary><span>What is the difference between padding and margin?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">Padding is space inside the border. Margin is space outside the border.</p></details><details class="qd"><summary><span>How do you select a class in CSS?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">Put a dot before the name, for example .card</p></details><details class="qd"><summary><span>What does display: flex do?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">It lays out the children of an element side by side in a row.</p></details><details class="qd"><summary><span>How do you centre a box that has a width?</span><svg class="ico"><use href="#i-right"/></svg></summary><p class="rv">margin: 0 auto;</p></details></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Click a question to reveal the answer only after learners have tried. Mix up who answers. If many get one wrong, revisit it with a quick live demo.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Let's check what stuck. I'll ask, you answer in your own words, and then we check together. If you can explain it, you understand it.</p></div></div>
 </section>
 
-<section class="slide" aria-label="Session 2 objectives">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Smartphones, operation, mouse and typing</span></div>
+<section class="slide" aria-label="Cheat sheet">
+  <div class="crumb"><span class="pill">Wrap-up</span><span class="time">Cheat sheet</span></div>
 
-  <h2 class="title">By the end of Session 2 you can…</h2>
-  <div class="objs">
-    <div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Compare smartphones and computers</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Switch a computer on and off correctly</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Find your way around the desktop</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Open and close applications</div>
+  <h2 class="title">Cheat sheet</h2>
+  <div class="csb">
+    <div class="card"><h3>HTML</h3>
+      <div class="r"><code>header, nav</code><span>Top of page, and links</span></div>
+      <div class="r"><code>main, section</code><span>Main content, and groups</span></div>
+      <div class="r"><code>footer</code><span>Bottom of the page</span></div>
+      <div class="r"><code>div</code><span>A generic container</span></div>
+      <div class="r"><code>class="card"</code><span>A name tag for styling</span></div>
+      <div class="r"><code>a href</code><span>Link to another page</span></div>
     </div>
-    <div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Use the mouse: click, double-click, right-click, drag, scroll</div>
-      <div class="obj"><svg class="ico"><use href="#i-check"/></svg>Identify the important keyboard keys</div>
-      <div class="card lime"><svg class="ico"><use href="#i-keyboard"/></svg><span>Type simple text</span></div>
-    </div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Session 2 covers smartphones versus computers, turning devices on and off, basic navigation, and typing.</p><p>Before class, open a text editor (Notepad, TextEdit, Google Docs or Word) and put a few folders or icons on each desktop for the mouse exercise.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Last time we learned the parts. Today we learn to use them. By the end you will be able to compare a smartphone and a computer, switch a computer on and off properly, move around the desktop, open and close apps, use the mouse, find the important keys, and type some text.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Smartphones versus computers">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Smartphones vs computers</span></div>
-
-  <h2 class="title">Smartphones vs computers</h2>
-  <div class="card ct">
-    <div class="hd"><b><svg class="ico" style="width:30px;height:30px"><use href="#i-phone"/></svg>Smartphone</b><b><svg class="ico" style="width:30px;height:30px"><use href="#i-desktop"/></svg>Computer</b></div>
-    <div class="rw"><span>Small and portable</span><span>Usually larger</span></div><div class="rw"><span>Mainly uses a touchscreen</span><span>Usually uses a keyboard and mouse</span></div><div class="rw"><span>Easy to carry</span><span>May stay on a desk, or be carried as a laptop</span></div><div class="rw"><span>Commonly used for calls and messaging</span><span>Commonly used for productivity and professional work</span></div><div class="rw"><span>Runs mobile applications</span><span>Runs desktop applications</span></div><div class="rw"><span>Usually smaller storage and display</span><span>Often more storage and a larger screen</span></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Both are digital devices designed differently. Ask learners what they prefer each one for, and avoid saying that one is simply better.</p><p>Use the real devices side by side if you can.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>A smartphone is small and easy to carry. You use it with your finger on a touchscreen, and it's great for calls and messaging. A computer is usually bigger. You normally use a keyboard and mouse, and it often has more storage and a larger screen. It's the usual choice for productivity and professional work.</p><p>They also run different apps: mobile apps on a phone, desktop apps on a computer.</p><p class="ck"><b>Check:</b> If you had to type a long report, which would you choose, and why?</p></div></div>
-</section>
-
-<section class="slide" aria-label="Both devices">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Smartphones vs computers</span></div>
-
-  <h2 class="title">Many tasks work on both. Some suit a computer better.</h2>
-  <div class="grid dual">
-    <div class="card"><h3>Both can…</h3><div class="lst">
-      <div><svg class="ico"><use href="#i-check"/></svg>Access the internet</div><div><svg class="ico"><use href="#i-check"/></svg>Send emails</div><div><svg class="ico"><use href="#i-check"/></svg>Watch videos</div>
-      <div><svg class="ico"><use href="#i-check"/></svg>Create documents</div><div><svg class="ico"><use href="#i-check"/></svg>Communicate with others</div><div><svg class="ico"><use href="#i-check"/></svg>Use applications</div></div></div>
-    <div class="card"><h3>A computer is usually easier for…</h3><div class="lst">
-      <div><svg class="ico"><use href="#i-arrow"/></svg>Large documents</div><div><svg class="ico"><use href="#i-arrow"/></svg>Programming</div><div><svg class="ico"><use href="#i-arrow"/></svg>Graphic design</div>
-      <div><svg class="ico"><use href="#i-arrow"/></svg>Spreadsheets</div><div><svg class="ico"><use href="#i-arrow"/></svg>Presentations</div><div><svg class="ico"><use href="#i-arrow"/></svg>Extensive typing</div></div></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Make the point that the line between the two is blurring. The difference is mostly convenience, not what is possible.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>These days phones and computers overlap a lot. Both can get online, send email, play video, make documents, help us communicate and run apps.</p><p>But when the job is big, like a long document, a spreadsheet, a presentation, graphic design, programming or a lot of typing, a computer with a keyboard and a bigger screen is simply more comfortable.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Switching on">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Operating a computer</span></div>
-
-  <h2 class="title">Switching a computer on</h2>
-  <div class="sidec">
-    <div class="stp">
-      <div class="sr card"><span class="no">1</span><span class="t">Check that the computer has power</span></div>
-      <div class="sr card"><span class="no">2</span><span class="t">Find the power button</span></div>
-      <div class="sr card"><span class="no">3</span><span class="t">Press it once</span></div>
-      <div class="sr card"><span class="no">4</span><span class="t">Wait for the system to load. Log in if asked</span></div>
-      <div class="sr card"><span class="no">5</span><span class="t">Let the desktop appear before you open anything</span></div>
-    </div>
-    <div class="card lime"><svg class="ico"><use href="#i-power"/></svg><p>Don't press the power button again and again while it starts.</p><p class="sm">Starting up takes a little time.</p></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Demonstrate each step slowly on a real computer, then have learners repeat it. Beginners often press the button repeatedly because nothing seems to happen, so reassure them that starting up takes time.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Let me show you. First check the computer has power: plugged in or charged. Find the power button and press it once. Just once.</p><p>Then be patient. The computer takes a little time to load. If it asks you to log in, do that. Wait until the desktop appears before you open anything.</p><p>Many beginners press the button again and again because nothing seems to happen. Please don't. Give it time.</p><p class="ck"><b>Check:</b> How many times do we press the power button?</p></div></div>
-</section>
-
-<section class="slide" aria-label="Switching off">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Operating a computer</span></div>
-
-  <h2 class="title">Switching a computer off correctly</h2>
-  <div class="sidec">
-    <div class="stp">
-      <div class="sr card"><span class="no">1</span><span class="t">Open the Start menu or system menu</span></div>
-      <div class="sr card"><span class="no">2</span><span class="t">Choose the power option</span></div>
-      <div class="sr card"><span class="no">3</span><span class="t">Select Shut Down</span></div>
-      <div class="sr card"><span class="no">4</span><span class="t">Wait until the device has turned off completely</span></div>
-    </div>
-    <div class="card lime"><svg class="ico"><use href="#i-alert"/></svg><p>Don't just remove the power.</p><p class="sm">An improper shutdown can sometimes cause unsaved work to be lost.</p></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Demonstrate the full sequence, then have each learner shut down their own machine. Do this at the end of every session so it becomes habit.</p><p>The reason to give: a computer should normally be shut down through its operating system, not by removing the power source. Improper shutdown can sometimes cause unsaved work to be lost.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Switching off has a right way too. Don't just pull out the plug or hold the power button. Open the menu, choose the power option, select Shut Down, and wait until the screen is completely off.</p><p>If you switch off the wrong way, you can lose work you haven't saved. It's like closing a shop properly instead of walking away and leaving the door open.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Mouse">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">The mouse</span></div>
-
-  <h2 class="title">Controlling the mouse</h2>
-  <div class="mouse">
-    <div><svg class="dg" viewBox="0 0 260 360" style="height:320px;width:auto" role="img" aria-label="A mouse with left button, right button and scroll wheel">
-<rect class="fl" x="40" y="20" width="180" height="320" rx="90"/>
-<path class="ln" d="M130 20v140M40 160h180"/>
-<rect class="scr" x="118" y="70" width="24" height="52" rx="12"/>
-<g><circle class="mk" cx="80" cy="105" r="14"/><text x="80" y="106">1</text></g><g><circle class="mk" cx="180" cy="105" r="14"/><text x="180" y="106">2</text></g><g><circle class="mk" cx="130" cy="96" r="14"/><text x="130" y="97">3</text></g></svg>
-      <div class="chips"><span class="chip"><span class="no" style="width:26px;height:26px;font-size:14px">1</span>Left button</span><span class="chip"><span class="no" style="width:26px;height:26px;font-size:14px">2</span>Right button</span><span class="chip"><span class="no" style="width:26px;height:26px;font-size:14px">3</span>Wheel</span></div>
-    </div>
-    <div><div class="ar"><b>Click</b><span>Press the left button once.</span></div><div class="ar"><b>Double-click</b><span>Press the left button twice, quickly.</span></div><div class="ar"><b>Right-click</b><span>Press the right button once to show more options.</span></div><div class="ar"><b>Drag</b><span>Hold the button down while moving the mouse.</span></div><div class="ar"><b>Scroll</b><span>Move a page up or down with the wheel or touchpad.</span></div></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Introduce the pointer (cursor) first: the small arrow that follows the mouse. Demonstrate each action, then let learners copy you.</p><p>The syllabus specifically requires learners to practise drag, click and double-click. Double-click is usually the hardest, so be patient and demonstrate the rhythm.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>On the screen you'll see a small arrow. That's the pointer. When you move the mouse, the pointer moves.</p><p>Click: press the left button once, to select something. Double-click: press the left button twice, quickly, to open something. Right-click: press the right button once to see extra options. Drag: hold the left button down, move the mouse, then let go. Scroll: roll the wheel to move a page up and down.</p><p>Double-click is the hardest one, so we will practise it a lot.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Mouse practice">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">The mouse</span></div>
-
-  <h2 class="title">Mouse practice</h2>
-  <p class="lede" style="font-size:23px">Several folders and icons are waiting on the desktop. Work through the four tasks.</p>
-  <div class="grid q4">
-    <div class="card"><span class="no">1</span><h3>Select</h3><p>Click once on an icon.</p></div>
-    <div class="card"><span class="no">2</span><h3>Open</h3><p>Double-click an app where appropriate.</p></div>
-    <div class="card"><span class="no">3</span><h3>Move</h3><p>Drag an item to a new place.</p></div>
-    <div class="card"><span class="no">4</span><h3>Scroll</h3><p>Move up and down a page.</p></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Before class, place several folders or icons on each desktop. Walk around and watch hand position and speed.</p><p>Learners who struggle with mouse control should get extra guided practice before Week 2.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Now you try. Click once on an icon to select it. Double-click an app to open it. Drag an item to a new spot on the desktop. Then scroll up and down a page.</p><p>Go slowly. If it doesn't work the first time, try again. Everyone needs repetition for this, and nobody gets it perfect straight away.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Applications">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Applications</span></div>
-
-  <h2 class="title">Opening and closing applications</h2>
-  <p class="lede" style="font-size:23px">An application, or app, is a program designed to do one particular task.</p>
-  <div class="chips" style="margin-top:16px"><span class="chip">Calculator</span><span class="chip">Google Chrome</span><span class="chip">Microsoft Word</span><span class="chip">Paint</span><span class="chip">Notes</span><span class="chip">Media apps</span></div>
-  <div class="grid wc">
-    <div class="card"><div class="bx"><svg class="ico"><use href="#i-minus"/></svg></div><h3>Minimize</h3><p>Temporarily hides the window.</p></div>
-    <div class="card"><div class="bx"><svg class="ico"><use href="#i-square"/></svg></div><h3>Maximize</h3><p>Makes the window fill most or all of the screen.</p></div>
-    <div class="card"><div class="bx"><svg class="ico"><use href="#i-x"/></svg></div><h3>Close</h3><p>Exits the application window.</p></div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Demonstrate opening an app from the desktop or the application menu. Then show minimize, maximize, restore and close.</p><p>Practise with a simple app such as Calculator or Paint. Make sure learners can tell the difference between hiding a window and closing it. Opening and closing applications is one of the specified Week 1 practical activities.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>An app is a program that does one job: Calculator for sums, Chrome for the internet, Word for documents, Paint for drawing. To open one, double-click its icon or find it in the menu.</p><p>Every app opens in a window with three buttons in a corner. Minimize hides the window for now. Maximize makes it fill the screen. Close shuts the app. After you maximize, you can restore the window to its smaller size.</p><p class="ck"><b>Check:</b> What is the difference between minimize and close?</p></div></div>
-</section>
-
-<section class="slide" aria-label="Keyboard">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">The keyboard</span></div>
-
-  <h2 class="title">The keyboard at a glance</h2>
-  <p class="lede" style="font-size:23px;margin-bottom:22px">The lime keys are the ones to learn first.</p>
-  <svg class="dg" viewBox="0 0 740 200" style="width:1120px;height:auto" role="img" aria-label="Keyboard with the important keys highlighted"><rect class="kn" x="2" y="2" width="36" height="36" rx="7"/><text class="kt" x="20.0" y="21.0">`</text><rect class="kn" x="42" y="2" width="36" height="36" rx="7"/><text class="kt" x="60.0" y="21.0">1</text><rect class="kn" x="82" y="2" width="36" height="36" rx="7"/><text class="kt" x="100.0" y="21.0">2</text><rect class="kn" x="122" y="2" width="36" height="36" rx="7"/><text class="kt" x="140.0" y="21.0">3</text><rect class="kn" x="162" y="2" width="36" height="36" rx="7"/><text class="kt" x="180.0" y="21.0">4</text><rect class="kn" x="202" y="2" width="36" height="36" rx="7"/><text class="kt" x="220.0" y="21.0">5</text><rect class="kn" x="242" y="2" width="36" height="36" rx="7"/><text class="kt" x="260.0" y="21.0">6</text><rect class="kn" x="282" y="2" width="36" height="36" rx="7"/><text class="kt" x="300.0" y="21.0">7</text><rect class="kn" x="322" y="2" width="36" height="36" rx="7"/><text class="kt" x="340.0" y="21.0">8</text><rect class="kn" x="362" y="2" width="36" height="36" rx="7"/><text class="kt" x="380.0" y="21.0">9</text><rect class="kn" x="402" y="2" width="36" height="36" rx="7"/><text class="kt" x="420.0" y="21.0">0</text><rect class="kn" x="442" y="2" width="36" height="36" rx="7"/><text class="kt" x="460.0" y="21.0">-</text><rect class="kn" x="482" y="2" width="36" height="36" rx="7"/><text class="kt" x="500.0" y="21.0">=</text><rect class="ks" x="522" y="2" width="76" height="36" rx="7"/><text class="kts" x="560.0" y="21.0">Backspace</text><rect class="ks" x="2" y="42" width="56.0" height="36" rx="7"/><text class="kts" x="30.0" y="61.0">Tab</text><rect class="kn" x="62.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="80.0" y="61.0">Q</text><rect class="kn" x="102.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="120.0" y="61.0">W</text><rect class="kn" x="142.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="160.0" y="61.0">E</text><rect class="kn" x="182.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="200.0" y="61.0">R</text><rect class="kn" x="222.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="240.0" y="61.0">T</text><rect class="kn" x="262.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="280.0" y="61.0">Y</text><rect class="kn" x="302.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="320.0" y="61.0">U</text><rect class="kn" x="342.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="360.0" y="61.0">I</text><rect class="kn" x="382.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="400.0" y="61.0">O</text><rect class="kn" x="422.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="440.0" y="61.0">P</text><rect class="kn" x="462.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="480.0" y="61.0">[</text><rect class="kn" x="502.0" y="42" width="36" height="36" rx="7"/><text class="kt" x="520.0" y="61.0">]</text><rect class="kn" x="542.0" y="42" width="56.0" height="36" rx="7"/><text class="kt" x="570.0" y="61.0">\</text><rect class="ks" x="2" y="82" width="66.0" height="36" rx="7"/><text class="kts" x="35.0" y="101.0">Caps</text><rect class="kn" x="72.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="90.0" y="101.0">A</text><rect class="kn" x="112.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="130.0" y="101.0">S</text><rect class="kn" x="152.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="170.0" y="101.0">D</text><rect class="kn" x="192.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="210.0" y="101.0">F</text><rect class="kn" x="232.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="250.0" y="101.0">G</text><rect class="kn" x="272.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="290.0" y="101.0">H</text><rect class="kn" x="312.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="330.0" y="101.0">J</text><rect class="kn" x="352.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="370.0" y="101.0">K</text><rect class="kn" x="392.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="410.0" y="101.0">L</text><rect class="kn" x="432.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="450.0" y="101.0">;</text><rect class="kn" x="472.0" y="82" width="36" height="36" rx="7"/><text class="kt" x="490.0" y="101.0">'</text><rect class="ks" x="512.0" y="82" width="86.0" height="36" rx="7"/><text class="kts" x="555.0" y="101.0">Enter</text><rect class="ks" x="2" y="122" width="86.0" height="36" rx="7"/><text class="kts" x="45.0" y="141.0">Shift</text><rect class="kn" x="92.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="110.0" y="141.0">Z</text><rect class="kn" x="132.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="150.0" y="141.0">X</text><rect class="kn" x="172.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="190.0" y="141.0">C</text><rect class="kn" x="212.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="230.0" y="141.0">V</text><rect class="kn" x="252.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="270.0" y="141.0">B</text><rect class="kn" x="292.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="310.0" y="141.0">N</text><rect class="kn" x="332.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="350.0" y="141.0">M</text><rect class="kn" x="372.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="390.0" y="141.0">,</text><rect class="kn" x="412.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="430.0" y="141.0">.</text><rect class="kn" x="452.0" y="122" width="36" height="36" rx="7"/><text class="kt" x="470.0" y="141.0">/</text><rect class="ks" x="492.0" y="122" width="106.0" height="36" rx="7"/><text class="kts" x="545.0" y="141.0">Shift</text><rect class="kn" x="2" y="162" width="46.0" height="36" rx="7"/><text class="kt" x="25.0" y="181.0">Ctrl</text><rect class="kn" x="52.0" y="162" width="46.0" height="36" rx="7"/><rect class="kn" x="102.0" y="162" width="46.0" height="36" rx="7"/><text class="kt" x="125.0" y="181.0">Alt</text><rect class="ks" x="152.0" y="162" width="246.0" height="36" rx="7"/><text class="kts" x="275.0" y="181.0">Space</text><rect class="kn" x="402.0" y="162" width="46.0" height="36" rx="7"/><text class="kt" x="425.0" y="181.0">Alt</text><rect class="kn" x="452.0" y="162" width="46.0" height="36" rx="7"/><rect class="kn" x="502.0" y="162" width="46.0" height="36" rx="7"/><rect class="kn" x="552.0" y="162" width="46.0" height="36" rx="7"/><text class="kt" x="575.0" y="181.0">Ctrl</text><rect class="ks" x="622.0" y="2" width="36" height="36" rx="7"/><text class="kts" x="640.0" y="21.0">Del</text><rect class="ks" x="662.0" y="122" width="36" height="36" rx="7"/><polygon class="ka" points="680.0,133.0 672.0,145.0 688.0,145.0"/><rect class="ks" x="622.0" y="162" width="36" height="36" rx="7"/><polygon class="ka" points="633.0,180.0 645.0,172.0 645.0,188.0"/><rect class="ks" x="662.0" y="162" width="36" height="36" rx="7"/><polygon class="ka" points="680.0,187.0 672.0,175.0 688.0,175.0"/><rect class="ks" x="702.0" y="162" width="36" height="36" rx="7"/><polygon class="ka" points="727.0,180.0 715.0,172.0 715.0,188.0"/></svg>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Show learners the real keyboard first, then this picture. Group the keys: letters, numbers, the spacebar, and the control keys.</p><p>Keyboard layouts differ slightly between devices, so point out where each key sits on your machines.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Look at your own keyboard. Most of it is letters and numbers, in the same places on every keyboard.</p><p>The lime keys do special jobs: Tab, Caps Lock, Shift, Enter, Backspace, Delete, the long Spacebar and the arrow keys. Find each one on your keyboard.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Key functions">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">The keyboard</span></div>
-
-  <h2 class="title">What the important keys do</h2>
-  <div class="grid kk"><div class="card"><span class="cap n">A–Z</span><h3 style="font-size:23px;margin:0">Alphabet keys</h3><p>Type letters.</p></div><div class="card"><span class="cap n">0–9</span><h3 style="font-size:23px;margin:0">Number keys</h3><p>Type numbers.</p></div><div class="card"><span class="cap">Space</span><h3 style="font-size:23px;margin:0">Spacebar</h3><p>Adds spaces.</p></div><div class="card"><span class="cap">Enter</span><h3 style="font-size:23px;margin:0">Enter</h3><p>Starts a new line or confirms an action.</p></div><div class="card"><span class="cap">Back</span><h3 style="font-size:23px;margin:0">Backspace</h3><p>Deletes characters behind the cursor.</p></div><div class="card"><span class="cap">Del</span><h3 style="font-size:23px;margin:0">Delete</h3><p>Deletes selected items or characters.</p></div><div class="card"><span class="cap">Shift</span><h3 style="font-size:23px;margin:0">Shift</h3><p>Capital letters, or the upper symbol on a key.</p></div><div class="card"><span class="cap">Caps</span><h3 style="font-size:23px;margin:0">Caps Lock</h3><p>Keeps capital letters on until pressed again.</p></div><div class="card"><span class="cap">← →</span><h3 style="font-size:23px;margin:0">Arrow keys</h3><p>Move the cursor.</p></div><div class="card"><span class="cap">Tab</span><h3 style="font-size:23px;margin:0">Tab</h3><p>Moves to another field or indent position.</p></div></div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Demonstrate each important key in a text editor, then let learners try it. Backspace and Delete are often confused: Backspace removes what is behind the cursor, Delete removes selected items or characters.</p><p>Don't rush this slide. Letting learners press each key themselves is what makes it stick.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Let's learn what these keys do. Spacebar puts a space between words. Enter starts a new line. Backspace removes what is behind the cursor, so it's your correcting key. Delete removes selected items. Shift gives you capital letters. Caps Lock keeps capitals on until you press it again. The arrow keys move the cursor. Tab jumps to the next field.</p><p>Now try each one in a document.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Typing habits">
-  <div class="crumb"><span class="pill">Session 2</span><span class="time">Typing</span></div>
-
-  <h2 class="title">Typing: good habits</h2>
-  <div class="good2">
-    <div class="card" style="padding:18px 32px"><div class="lst"><div><svg class="ico"><use href="#i-check"/></svg>Sit comfortably</div><div><svg class="ico"><use href="#i-check"/></svg>Keep your back reasonably straight</div><div><svg class="ico"><use href="#i-check"/></svg>Place the keyboard where it feels comfortable</div><div><svg class="ico"><use href="#i-check"/></svg>Use both hands where possible</div><div><svg class="ico"><use href="#i-check"/></svg>Press keys gently, not aggressively</div><div><svg class="ico"><use href="#i-check"/></svg>Look at the screen regularly</div></div></div>
-    <div class="card lime" style="padding:34px 36px;display:flex;flex-direction:column;gap:16px">
-      <p class="quote">Accuracy before speed.</p>
-      <p style="font-size:22px;line-height:1.4">You don't need to touch type yet. First get comfortable finding keys and entering text correctly.</p>
+    <div class="card"><h3>CSS</h3>
+      <div class="r"><code>.card { }</code><span>Style a class</span></div>
+      <div class="r"><code>padding, margin</code><span>Space inside, space outside</span></div>
+      <div class="r"><code>border</code><span>3px solid #27251f</span></div>
+      <div class="r"><code>display: flex</code><span>Side by side (on the parent)</span></div>
+      <div class="r"><code>justify-content</code><span>Spread items along the row</span></div>
+      <div class="r"><code>border-radius</code><span>Rounded corners</span></div>
+      <div class="r"><code>:hover</code><span>When the mouse is over</span></div>
     </div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>For absolute beginners, avoid demanding formal touch typing straight away. First build confidence in identifying keys and entering text correctly.</p><p>Watch posture and how hard learners press the keys, and gently correct as you walk around.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Before we type, a few good habits. Sit comfortably with your back reasonably straight. Put the keyboard where your arms feel relaxed. Use both hands if you can. Press the keys gently, you don't need to hit them. And look at the screen from time to time.</p><p>Most important: accuracy before speed. We are not racing. If you type slowly and correctly, speed will come with practice.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Practical 2">
-  <div class="crumb"><span class="pill">Practical 2</span><span class="time">Type your name</span></div>
-
-  <h2 class="title">Practical: type your name</h2>
-  <p class="lede" style="font-size:23px">Open Notepad, TextEdit, Google Docs or Microsoft Word, and type these three lines.</p>
-  <div class="card ed"><div class="edh"><i></i><i></i><i></i></div>
-    <div class="bd"><span>My name is ____________.</span><span>I am learning Digital Literacy at Nexora.</span><span>Digital skills can help me learn, communicate and work.<i class="caret"></i></span></div></div>
-  <div class="chips mt"><span class="chip">Then practise:</span><span class="chip">Spacebar</span><span class="chip">Enter</span><span class="chip">Backspace</span><span class="chip">Shift</span><span class="chip">Caps Lock</span><span class="chip">Punctuation</span></div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>This directly supports the syllabus requirement that learners can type their name.</p><p>Circulate and check that each learner can start a new line, correct a mistake with Backspace, make a capital letter with Shift, and use punctuation. Don't rush anyone.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Open a text editor: Notepad, TextEdit, Google Docs or Word. Type three lines. First: My name is, and then your own name. Second: I am learning Digital Literacy at Nexora. Third: Digital skills can help me learn, communicate and work.</p><p>As you type, use the Spacebar between words, Enter for a new line, Backspace to fix mistakes, Shift for capital letters, and a full stop at the end. Take your time. A correct sentence typed slowly is better than a fast one full of mistakes.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Week 1 challenge">
-  <div class="crumb"><span class="pill">Challenge</span><span class="time">End of the week</span></div>
-
-  <h2 class="title">Week 1 classroom challenge</h2>
-  <div class="grid dual" style="margin-top:20px;gap:22px">
-    <div class="stp"><div class="sr card"><span class="no">1</span><span class="t" style="font-size:22px">Sit at a computer</span></div><div class="sr card"><span class="no">2</span><span class="t" style="font-size:22px">Identify at least five computer parts</span></div><div class="sr card"><span class="no">3</span><span class="t" style="font-size:22px">Switch the computer on</span></div><div class="sr card"><span class="no">4</span><span class="t" style="font-size:22px">Locate the desktop</span></div><div class="sr card"><span class="no">5</span><span class="t" style="font-size:22px">Move the mouse</span></div></div>
-    <div class="stp"><div class="sr card"><span class="no">6</span><span class="t" style="font-size:22px">Click and double-click</span></div><div class="sr card"><span class="no">7</span><span class="t" style="font-size:22px">Open an application</span></div><div class="sr card"><span class="no">8</span><span class="t" style="font-size:22px">Type your name and a short sentence</span></div><div class="sr card"><span class="no">9</span><span class="t" style="font-size:22px">Close the application</span></div><div class="sr card"><span class="no">10</span><span class="t" style="font-size:22px">Shut the computer down properly</span></div></div>
-  </div>
-  <p class="sm mt">This brings together the four practical outcomes: typing a name, opening and closing applications, controlling the mouse and identifying computer parts.</p>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Give this as a short practical at the end of the week and score it with the assessment grid on the next slide.</p><p>Watch one learner at a time while the others practise. Note which steps each learner needs help with.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>At the end of the week, each of you will do a short challenge. Sit at a computer. Name at least five parts. Switch it on. Find the desktop. Move the mouse, click and double-click. Open an app. Type your name and a short sentence. Close the app. Then shut the computer down properly.</p><p>If you can do all of that, you have reached the aim of Week 1.</p></div></div>
-</section>
-
-<section class="slide" aria-label="Assessment">
-  <div class="crumb"><span class="pill">Assessment</span><span class="time">Out of 20</span></div>
-
-  <h2 class="title">How we'll check your progress</h2>
-  <div class="done" style="grid-template-columns:1.7fr 1fr;margin-top:18px">
-    <div class="card sc"><div class="sk"><span>Explain digital literacy</span><span class="bb"><i style="--m:2"></i></span><span class="m">2</span></div><div class="sk"><span>Identify four computer parts</span><span class="bb"><i style="--m:4"></i></span><span class="m">4</span></div><div class="sk"><span>Explain smartphone vs computer</span><span class="bb"><i style="--m:2"></i></span><span class="m">2</span></div><div class="sk"><span>Turn the computer on correctly</span><span class="bb"><i style="--m:2"></i></span><span class="m">2</span></div><div class="sk"><span>Click, double-click and drag</span><span class="bb"><i style="--m:3"></i></span><span class="m">3</span></div><div class="sk"><span>Open and close an application</span><span class="bb"><i style="--m:2"></i></span><span class="m">2</span></div><div class="sk"><span>Type name and a short sentence</span><span class="bb"><i style="--m:3"></i></span><span class="m">3</span></div><div class="sk"><span>Shut the computer down correctly</span><span class="bb"><i style="--m:2"></i></span><span class="m">2</span></div><div class="sk tot"><span>Total</span><span></span><span class="m">20</span></div></div>
-    <div class="card lime" style="padding:30px 32px;display:flex;flex-direction:column;gap:16px">
-      <p class="quote" style="font-size:44px">12 / 20</p>
-      <p style="font-size:22px;line-height:1.4">Around 12 or above, and you move on.</p>
-      <p style="font-size:22px;line-height:1.4">If mouse control or typing is still hard, you'll get extra guided practice before Week 2.</p>
-    </div>
-  </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>A simple assessment scored out of 20. A learner scoring around 12/20 or above can proceed. Learners struggling with mouse control or typing should receive extra guided practice before Week 2.</p><p>Present it as a check on progress, not a pass-or-fail test. Many beginners are anxious about being assessed.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>This is how we check progress. There are 20 marks in total, and most of them are for things you do with your hands. It isn't meant to scare anyone.</p><p>If you score around 12 or above, you move on. If the mouse or typing is still hard, you get extra practice first, because the next weeks depend on those skills.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>A revision aid. Learners can photograph it or keep the student PDF. Reassure them: developers look things up all the time.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Here's everything from today on one page. On the left, the HTML ideas: structure tags, classes and links. On the right, the CSS: classes, spacing, flexbox, rounded corners and hover. You don't need to memorise it. Keep it nearby while you practise.</p></div></div>
 </section>
 
 <section class="slide" aria-label="Homework">
-  <div class="crumb"><span class="pill">Homework</span><span class="time">Before the next session</span></div>
+  <div class="crumb"><span class="pill">Homework</span><span class="time">Before the next lesson</span></div>
 
   <h2 class="title">Homework</h2>
   <div class="grid dual" style="margin-top:20px">
-    <div class="card"><h3>Part 1: devices around you</h3>
-      <p>Write down five digital devices you see or use at home or in your community. Give one use for each.</p>
-      <div class="lines"><div><span>1</span><i></i></div><div><span>2</span><i></i></div><div><span>3</span><i></i></div><div><span>4</span><i></i></div><div><span>5</span><i></i></div></div></div>
+    <div class="card"><h3>Part 1: improve your site</h3>
+      <div class="lst">
+        <div><svg class="ico"><use href="#i-pencil"/></svg>Add a third page, such as Contact, and link it in the nav</div>
+        <div><svg class="ico"><use href="#i-pencil"/></svg>Change the colours and fonts to match your own brand</div>
+        <div><svg class="ico"><use href="#i-pencil"/></svg>Add a hover effect to your cards</div>
+        <div><svg class="ico"><use href="#i-save"/></svg>Keep the web-day2 folder safe. Bring it or send a screenshot</div>
+      </div></div>
     <div class="card"><h3>Part 2: answer in your notebook</h3>
-      <div class="lst"><div><svg class="ico"><use href="#i-pencil"/></svg>What is digital literacy?</div><div><svg class="ico"><use href="#i-pencil"/></svg>What is the difference between hardware and software?</div><div><svg class="ico"><use href="#i-pencil"/></svg>Name five parts of a computer.</div><div><svg class="ico"><use href="#i-pencil"/></svg>Give two differences between a smartphone and a computer.</div><div><svg class="ico"><use href="#i-pencil"/></svg>Explain the difference between clicking and double-clicking.</div></div></div>
+      <div class="lst"><div><svg class="ico"><use href="#i-pencil"/></svg>What is the box model?</div><div><svg class="ico"><use href="#i-pencil"/></svg>What is the difference between padding and margin?</div><div><svg class="ico"><use href="#i-pencil"/></svg>Write the CSS to put three cards in a row with a gap.</div><div><svg class="ico"><use href="#i-pencil"/></svg>How do you link two pages together?</div><div><svg class="ico"><use href="#i-pencil"/></svg>Why do we use classes?</div></div></div>
   </div>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Learners write in their notebooks. Collect or review the homework at the start of the next session.</p><p>If a learner has no devices at home, they can use devices they see in their community, for example in shops, offices or schools.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Your homework has two parts. First, look around your home or your neighbourhood and write down five digital devices you see or use, and one thing each is used for. Second, answer five questions in your notebook.</p><p>If you can answer them in your own words, you have understood the week.</p></div></div>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Ask learners to bring the web-day2 folder on a flash drive or send a screenshot of both pages. Start the next lesson by looking at a few.</p><p>Encourage experimenting: change one value, save, look, undo. That is how designers learn.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>For homework, make your site your own. Add a third page, like Contact, and add it to the nav. Change the colours and fonts so it looks like your brand. Add a hover effect to your cards. Keep your folder safe. Then answer the five questions in your notebook, using your own words.</p><p>If you break something, undo with Control Z and try again. Experimenting is the best way to learn.</p></div></div>
 </section>
 
 <section class="slide" aria-label="Recap">
-  <div class="crumb"><span class="pill">Week 1</span><span class="time">Recap</span></div>
+  <div class="crumb"><span class="pill">Wrap-up</span><span class="time">Recap</span></div>
 
-  <h2 class="title">Week 1 recap</h2>
-  <div class="grid rc"><div class="card"><svg class="ico"><use href="#i-check"/></svg>Digital literacy</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Digital devices</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Parts of a computer</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Hardware and software</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Smartphones vs computers</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Switching on and off</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Mouse and keyboard</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Typing your name</div></div>
-  <p class="quote mt" style="font-size:40px">Practise a little every day. Accuracy first, speed later.</p>
-  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Close the week by asking learners to recall each item in their own words. Praise progress, especially from learners who started nervous.</p><p>Remind them of the homework.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Look at what you can do now. You know what digital literacy means, you can name devices and computer parts, you can tell hardware from software, and you can compare a phone with a computer. You can switch a computer on and off properly, use the mouse and the keyboard, and type your own name.</p><p>Keep practising a little every day. Mouse control and typing improve with repetition. Accuracy first, and speed will follow.</p></div></div>
+  <h2 class="title">Day 2 recap</h2>
+  <div class="grid rc"><div class="card"><svg class="ico"><use href="#i-check"/></svg>Page structure tags</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Links between pages</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Classes and selectors</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>The box model</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Flexbox layout</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Shadows and hover</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Phone-friendly pages</div><div class="card"><svg class="ico"><use href="#i-check"/></svg>Your mini website</div></div>
+  <p class="quote mt" style="font-size:38px">You didn't just write pages today. You designed a website.</p>
+  <div class="notes"><div class="n-tutor"><h3>Tutor notes</h3><p>Ask learners to recall each item in their own words. Celebrate their finished sites: have a few learners show their screens to the class.</p><p>Remind them to keep the folder; they can keep building on the same site in later lessons.</p></div><div class="n-say"><h3>How to explain it to students</h3><p>Look at what you did today. You organised a page with header, nav, main and footer. You linked two pages. You used classes, learned the box model, and used flexbox to lay out your cards. You added shadows and hover effects, and thought about phones.</p><p>You didn't just write pages today. You designed a website. Keep practising, and keep that folder safe.</p></div></div>
 </section>
     </div></div>
   </main>
@@ -996,8 +1125,8 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
   <nav id="bar" aria-label="Slide controls">
     <button class="btn" id="prev" aria-label="Previous slide"><svg class="ico"><use href="#i-left"/></svg></button>
     <button class="btn" id="next" aria-label="Next slide"><svg class="ico"><use href="#i-right"/></svg></button>
-    <span id="count" aria-live="off">1 / 31</span>
-    <div id="track" role="progressbar" aria-label="Progress" aria-valuemin="1" aria-valuemax="31" aria-valuenow="1"><div id="fill"></div></div>
+    <span id="count" aria-live="off">1 / 32</span>
+    <div id="track" role="progressbar" aria-label="Progress" aria-valuemin="1" aria-valuemax="32" aria-valuenow="1"><div id="fill"></div></div>
     <button class="btn" id="notesBtn" aria-label="Toggle tutor notes" aria-pressed="false" title="Tutor notes (N)"><svg class="ico"><use href="#i-notes"/></svg></button>
     <button class="btn" id="theme" aria-label="Switch light or dark" title="Light or dark"><svg class="ico"><use href="#i-contrast"/></svg></button>
     <button class="btn" id="full" aria-label="Fullscreen" title="Fullscreen (F)"><svg class="ico"><use href="#i-expand"/></svg></button>
@@ -1031,16 +1160,20 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
     count.textContent=(n+1)+' / '+slides.length;
     fill.style.width=((n+1)/slides.length*100)+'%';
     track.setAttribute('aria-valuenow',n+1);
-    var nt=slides[n].querySelector('.notes');
-    notesBody.innerHTML=nt?nt.innerHTML:'';
+    updateNotes();
     prev.disabled=n===0;next.disabled=n===slides.length-1;
     try{history.replaceState(null,'','#'+(n+1))}catch(e){}
   }
 
   var notesUnlocked=false;
+  function updateNotes(){
+    var nt=slides[cur].querySelector('.notes');
+    notesBody.innerHTML=notesUnlocked&&document.body.classList.contains('notes-open')&&nt?nt.innerHTML:'';
+  }
   function openNotes(){
     if(!document.body.classList.contains('notes-open')){
       document.body.classList.add('notes-open');
+      updateNotes();
       notesBtn.setAttribute('aria-pressed','true');
       setTimeout(fit,280);
     }
@@ -1048,6 +1181,7 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
   function toggleNotes(){
     if(document.body.classList.contains('notes-open')){
       document.body.classList.remove('notes-open');
+      updateNotes();
       notesBtn.setAttribute('aria-pressed','false');
       setTimeout(fit,280);
       return;
@@ -1059,25 +1193,48 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
     var overlay=document.getElementById('pwOverlay');
     var inp=document.getElementById('pwInput');
     var err=document.getElementById('pwError');
-    inp.value='';err.style.opacity='0';
+    var cancel=document.getElementById('pwCancel');
+    var submit=document.getElementById('pwSubmit');
+    var previousFocus=document.activeElement===document.body?notesBtn:document.activeElement;
+    inp.value='';err.style.opacity='0';err.hidden=true;
+    inp.removeAttribute('aria-invalid');
+    overlay.hidden=false;
     overlay.classList.add('pw-visible');
-    setTimeout(function(){inp.focus()},80);
+    inp.focus();
+    function closeModal(){
+      overlay.classList.remove('pw-visible');
+      overlay.hidden=true;
+      inp.value='';
+      overlay.onkeydown=null;
+      (previousFocus||notesBtn).focus();
+    }
     function attempt(){
       if(inp.value==='535301'){
-        overlay.classList.remove('pw-visible');
+        closeModal();
         onSuccess();
       } else {
+        err.hidden=false;
         err.style.opacity='1';
+        inp.setAttribute('aria-invalid','true');
         inp.value='';
         inp.focus();
         inp.classList.add('pw-shake');
         setTimeout(function(){inp.classList.remove('pw-shake')},400);
       }
     }
-    document.getElementById('pwSubmit').onclick=attempt;
-    inp.onkeydown=function(e){if(e.key==='Enter')attempt();if(e.key==='Escape'){overlay.classList.remove('pw-visible');inp.onkeydown=null;}};
-    document.getElementById('pwCancel').onclick=function(){overlay.classList.remove('pw-visible');};
+    submit.onclick=attempt;
+    cancel.onclick=closeModal;
+    overlay.onkeydown=function(e){
+      e.stopPropagation();
+      if(e.key==='Escape'){e.preventDefault();closeModal();}
+      else if(e.key==='Enter'&&e.target!==cancel){e.preventDefault();attempt();}
+      else if(e.key==='Tab'){
+        if(e.shiftKey&&document.activeElement===inp){e.preventDefault();submit.focus();}
+        else if(!e.shiftKey&&document.activeElement===submit){e.preventDefault();inp.focus();}
+      }
+    };
   }
+
 
   prev.addEventListener('click',function(){show(cur-1)});
   next.addEventListener('click',function(){show(cur+1)});
@@ -1096,12 +1253,14 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
     var dark=current?current==='dark':systemDark();
     var nextTheme=dark?'light':'dark';
     root.setAttribute('data-theme',nextTheme);
-    try{localStorage.setItem('nexora-w1-theme',nextTheme)}catch(e){}
+    try{localStorage.setItem('webdesign-day2-theme',nextTheme)}catch(e){}
   });
-  try{var saved=localStorage.getItem('nexora-w1-theme');if(saved==='light'||saved==='dark')root.setAttribute('data-theme',saved)}catch(e){}
+  try{var saved=localStorage.getItem('webdesign-day2-theme');if(saved==='light'||saved==='dark')root.setAttribute('data-theme',saved)}catch(e){}
 
   document.addEventListener('keydown',function(e){
     if(e.metaKey||e.ctrlKey||e.altKey)return;
+    if(!document.getElementById('pwOverlay').hidden)return;
+    if(e.target&&e.target.closest&&e.target.closest('input,textarea,select,[contenteditable="true"]'))return;
     var onBtn=e.target&&e.target.closest&&e.target.closest('button,summary');
     var k=e.key;
     if((k===' '||k==='Enter')&&onBtn)return;
@@ -1146,13 +1305,13 @@ details.qd .rv{padding:0 0 18px;font-size:21px;line-height:1.4;color:var(--muted
   if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit)}
 })();
 </script>
-<div id="pwOverlay" role="dialog" aria-modal="true" aria-labelledby="pwTitle">
+<div id="pwOverlay" role="dialog" aria-modal="true" aria-labelledby="pwTitle" aria-describedby="pwDescription" hidden>
   <div id="pwBox">
     <h2 id="pwTitle">Tutor Notes</h2>
-    <p>Enter the tutor password to view notes.</p>
+    <p id="pwDescription">Enter the tutor password to view notes.</p>
     <input id="pwInput" type="password" inputmode="numeric" maxlength="16"
            placeholder="••••••" autocomplete="off" aria-label="Password">
-    <p id="pwError" aria-live="polite">Incorrect password. Try again.</p>
+    <p id="pwError" aria-live="polite" hidden>Incorrect password. Try again.</p>
     <div class="pw-actions">
       <button id="pwCancel">Cancel</button>
       <button id="pwSubmit">Unlock</button>
